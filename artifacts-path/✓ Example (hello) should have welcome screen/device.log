@@ -1,0 +1,64 @@
+--------- beginning of main
+01-10 17:19:30.118 13095 13316 I ReactNativeJS: Running "example
+01-10 17:19:30.205 13095 13095 D CompatibilityChangeReporter: Compat change id reported: 210923482; UID 10306; state: DISABLED
+01-10 17:19:30.205 13095 13095 D CompatibilityChangeReporter: Compat change id reported: 37756858; UID 10306; state: ENABLED
+01-10 17:19:30.232 13095 13095 I Detox   : UIManagerModule is busy
+01-10 17:19:30.248 13095 13095 I Detox   : Wait is over: App is now idle!
+01-10 17:19:30.248 13095 13339 I DetoxWSClient: Sending out action 'ready' (ID #-1000)
+01-10 17:19:30.248 13095 13339 I DetoxDispatcher: Done with action 'isReady'
+01-10 17:19:30.248 13095 13339 I DetoxDispatcher: Handling action 'loginSuccess' (ID #0)...
+01-10 17:19:30.248 13095 13339 I DetoxDispatcher: Done with action 'loginSuccess'
+01-10 17:19:30.249 13095 13339 I DetoxDispatcher: Handling action 'isReady' (ID #-1000)...
+01-10 17:19:30.252 13095 13095 I Detox   : Wait is over: App is now idle!
+01-10 17:19:30.253 13095 13339 I DetoxWSClient: Sending out action 'ready' (ID #-1000)
+01-10 17:19:30.253 13095 13339 I DetoxDispatcher: Done with action 'isReady'
+01-10 17:19:30.817 13095 13343 D DetoxWSClient: Received action 'reactNativeReload' (ID #-1000, params={})
+01-10 17:19:30.817 13095 13339 I DetoxDispatcher: Handling action 'reactNativeReload' (ID #-1000)...
+01-10 17:19:30.824 13095 13339 I DetoxRNExt: Reloading React Native
+01-10 17:19:30.829 13095 13306 D TrafficStats: tagSocket(128) with statsTag=0xffffffff, statsUid=-1
+01-10 17:19:30.833 13095 13306 W unknown:ReactNative: The packager does not seem to be running as we got an IOException requesting its status: Failed to connect to localhost/127.0.0.1:8081
+01-10 17:19:30.838 13095 13318 W unknown:ReactContextBaseJavaModule: Catalyst Instance has already disappeared: requested by DeviceInfo
+01-10 17:19:30.838 13095 13318 W unknown:ReactContextBaseJavaModule: Catalyst Instance has already disappeared: requested by NativeAnimatedModule
+01-10 17:19:30.838 13095 13318 W unknown:ReactContextBaseJavaModule: Catalyst Instance has already disappeared: requested by FrescoModule
+01-10 17:19:30.839 13095 13095 W unknown:ReactNative: Packager connection already open, nooping.
+01-10 17:19:30.845 13095 13385 V AsyncStorageExpoMigration: No scoped database found
+01-10 17:19:31.745 13095 13307 D TrafficStats: tagSocket(106) with statsTag=0xffffffff, statsUid=-1
+01-10 17:19:31.745 13095 13308 D TrafficStats: tagSocket(107) with statsTag=0xffffffff, statsUid=-1
+01-10 17:19:32.892 13095 13385 W unknown:ReactContext: initializeMessageQueueThreads() is called.
+01-10 17:19:32.908 13095 13095 W unknown:ReactNative: Packager connection already open, nooping.
+01-10 17:19:32.909 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.drawer.ReactDrawerLayoutManager
+01-10 17:19:32.915 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.uimanager.LayoutShadowNode
+01-10 17:19:32.919 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollViewManager
+01-10 17:19:32.920 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollContainerViewManager
+01-10 17:19:32.920 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ReactProgressBarViewManager
+01-10 17:19:32.921 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ProgressBarShadowNode
+01-10 17:19:32.922 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactScrollViewManager
+01-10 17:19:32.926 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.slider.ReactSliderManager
+01-10 17:19:32.929 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.slider.ReactSliderManager$ReactSliderShadowNode
+01-10 17:19:32.930 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager
+01-10 17:19:32.933 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager$ReactSwitchShadowNode
+01-10 17:19:32.934 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.swiperefresh.SwipeRefreshLayoutManager
+01-10 17:19:32.936 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageViewManager
+01-10 17:19:32.937 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageShadowNode
+01-10 17:19:32.939 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.image.ReactImageManager
+01-10 17:19:32.941 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ReactModalHostManager
+01-10 17:19:32.941 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ModalHostShadowNode
+01-10 17:19:32.942 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextManager
+01-10 17:19:32.942 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextShadowNode
+01-10 17:19:32.943 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputManager
+01-10 17:19:32.944 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputShadowNode
+01-10 17:19:32.946 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextViewManager
+01-10 17:19:32.947 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextShadowNode
+01-10 17:19:32.947 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.view.ReactViewManager
+01-10 17:19:32.949 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextViewManager
+01-10 17:19:32.950 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextShadowNode
+01-10 17:19:32.950 13095 13387 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.unimplementedview.ReactUnimplementedViewManager
+01-10 17:19:32.951 13095 13387 W unknown:ReactContext: initializeMessageQueueThreads() is called.
+01-10 17:19:32.953 13095 13095 D DetoxRNLoading: Listener-proxy method called: onReactContextInitialized
+01-10 17:19:32.953 13095 13095 I DetoxRNLoading: Got new RN-context async'ly through listener
+01-10 17:19:32.953 13095 13095 D DetoxRNLoading: Listener-proxy method called: equals
+01-10 17:19:32.954 13095 13339 I DetoxRNIdleRes: Setting up Espresso Idling Resources for React Native
+01-10 17:19:32.958 13095 13339 D AsyncStorageIR: Checking whether a custom IR for Async-Storage is required... (legacy=false)
+01-10 17:19:32.958 13095 13339 D AsyncStorageIR: IR for Async-Storage is required! (legacy=false)
+01-10 17:19:32.958 13095 13339 D AsyncStorageIR: Checking whether a custom IR for Async-Storage is required... (legacy=true)
+01-10 17:19:32.959 130

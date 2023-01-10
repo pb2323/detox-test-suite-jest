@@ -1,0 +1,1143 @@
+Jan 10 17:19:08 detox[8934] TRACE: [DETOX_CREATE] created a Detox instance with config:
+{
+  appsConfig: {
+    default: {
+      type: 'android.apk',
+      binaryPath: '../app-debug.apk'
+    }
+  },
+  artifactsConfig: {
+    rootDir: 'artifacts-cli/',
+    plugins: {
+      log: {
+        enabled: true,
+        keepOnlyFailedTestsArtifacts: false
+      },
+      screenshot: {
+        enabled: true,
+        shouldTakeAutomaticSnapshots: true,
+        keepOnlyFailedTestsArtifacts: false,
+        takeWhen: {
+          testStart: true,
+          testDone: true,
+          appNotReady: true
+        }
+      },
+      video: {
+        enabled: false,
+        keepOnlyFailedTestsArtifacts: false
+      },
+      instruments: {
+        enabled: false,
+        keepOnlyFailedTestsArtifacts: false
+      },
+      timeline: {
+        enabled: false
+      },
+      uiHierarchy: {
+        enabled: false,
+        keepOnlyFailedTestsArtifacts: false
+      }
+    },
+    pathBuilder: ArtifactPathBuilder {
+      _rootDir: 'artifacts-path'
+    }
+  },
+  behaviorConfig: {
+    init: {
+      reinstallApp: false,
+      exposeGlobals: true
+    },
+    cleanup: {
+      shutdownDevice: false
+    },
+    launchApp: 'auto'
+  },
+  cliConfig: {
+    artifactsLocation: 'artifacts-cli/',
+    configPath: './detox.config.json',
+    loglevel: 'info',
+    reuse: true,
+    useCustomLogger: true
+  },
+  configurationName: 'android.real.debug',
+  deviceConfig: {
+    type: 'android.attached',
+    device: {
+      adbName: 'RFCR90M7DPD'
+    }
+  },
+  runnerConfig: {
+    testRunner: 'jest',
+    runnerConfig: 'e2e/config.json',
+    specs: 'e2e',
+    skipLegacyWorkersInjection: false
+  },
+  sessionConfig: {
+    autoStart: true,
+    sessionId: 'a4c8334c-c012-0a74-4f9a-40c543d098c7',
+    debugSynchronization: 10000
+  }
+}
+Jan 10 17:19:08 detox[8934] DEBUG: [WSS_CREATE] Detox server listening on localhost:49946...
+Jan 10 17:19:08 detox[8934] DEBUG: [WSS_CONNECTION, #49947] registered a new connection.
+Jan 10 17:19:08 detox[8934] TRACE: [WS_OPEN] opened web socket to: ws://localhost:49946
+Jan 10 17:19:08 detox[8934] TRACE: [WS_SEND] {"type":"login","params":{"sessionId":"a4c8334c-c012-0a74-4f9a-40c543d098c7","role":"tester"},"messageId":0}
+Jan 10 17:19:08 detox[8934] TRACE: [WSS_GET_FROM, #49947] {"type":"login","params":{"sessionId":"a4c8334c-c012-0a74-4f9a-40c543d098c7","role":"tester"},"messageId":0}
+Jan 10 17:19:08 detox[8934] TRACE: [SESSION_CREATED] created session a4c8334c-c012-0a74-4f9a-40c543d098c7
+Jan 10 17:19:08 detox[8934] TRACE: [WSS_SEND_TO, #tester] {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+Jan 10 17:19:08 detox[8934] TRACE: [SESSION_JOINED] tester joined session a4c8334c-c012-0a74-4f9a-40c543d098c7
+Jan 10 17:19:08 detox[8934] TRACE: [WS_MESSAGE] {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+ 
+Jan 10 17:19:08 detox[8934] DEBUG: [EXEC_CMD, #0] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb"  devices
+Jan 10 17:19:08 detox[8934] DEBUG: [EXEC_SUCCESS, #0] List of devices attached
+RFCR90M7DPD	device
+
+
+Jan 10 17:19:08 detox[8934] DEBUG: [DEVICE_LOOKUP] Found a matching & free device RFCR90M7DPD
+Jan 10 17:19:08 detox[8934] DEBUG: [EXEC_CMD, #1] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "getprop ro.build.version.sdk"
+Jan 10 17:19:08 detox[8934] TRACE: [EXEC_SUCCESS, #1] 33
+
+Jan 10 17:19:08 detox[8934] DEBUG: [EXEC_CMD, #2] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "dumpsys power | grep \"^[ ]*m[UW].*=\""
+Jan 10 17:19:08 detox[8934] TRACE: [EXEC_SUCCESS, #2]   mWakefulness=Awake
+  mWakefulnessChanging=false
+  mWakeLockSummary=0x0
+  mWakeUpWhenPluggedOrUnpluggedConfig=true
+  mWakeUpWhenPluggedOrUnpluggedInTheaterModeConfig=false
+  mUserActivityTimeoutOverrideFromWindowManager=-1
+  mUserActivityTimeoutForDexOverrideFromWindowManager=-1
+  mUserInactiveOverrideFromWindowManager=false
+  mUserId=0
+  mWakeLockSummary=0x0
+
+Jan 10 17:19:08 detox[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBootDevice({ deviceId: 'RFCR90M7DPD', type: 'device', coldBoot: false })
+Jan 10 17:19:08 detox[8934] DEBUG: [EXEC_CMD, #3] "/Users/puneetbajaj/Library/Android/sdk/build-tools/33.0.1/aapt" dump badging "/Users/puneetbajaj/Desktop/browserstack/detox-session/app-debug.apk"
+Jan 10 17:19:09 detox[8934] TRACE: [EXEC_SUCCESS, #3] package: name='com.detox.rn.example' versionCode='1' versionName='1.0' platformBuildVersionName='12' platformBuildVersionCode='31' compileSdkVersion='31' compileSdkVersionCodename='12'
+sdkVersion:'21'
+targetSdkVersion:'31'
+uses-permission: name='android.permission.INTERNET'
+uses-permission: name='android.permission.SYSTEM_ALERT_WINDOW'
+application-label:'example'
+application-label-af:'example'
+application-label-am:'example'
+application-label-ar:'example'
+application-label-as:'example'
+application-label-az:'example'
+application-label-be:'example'
+application-label-bg:'example'
+application-label-bn:'example'
+application-label-bs:'example'
+application-label-ca:'example'
+application-label-cs:'example'
+application-label-da:'example'
+application-label-de:'example'
+application-label-el:'example'
+application-label-en-AU:'example'
+application-label-en-CA:'example'
+application-label-en-GB:'example'
+application-label-en-IN:'example'
+application-label-en-XC:'example'
+application-label-es:'example'
+application-label-es-US:'example'
+application-label-et:'example'
+application-label-eu:'example'
+application-label-fa:'example'
+application-label-fi:'example'
+application-label-fr:'example'
+application-label-fr-CA:'example'
+application-label-gl:'example'
+application-label-gu:'example'
+application-label-hi:'example'
+application-label-hr:'example'
+application-label-hu:'example'
+application-label-hy:'example'
+application-label-in:'example'
+application-label-is:'example'
+application-label-it:'example'
+application-label-iw:'example'
+application-label-ja:'example'
+application-label-ka:'example'
+application-label-kk:'example'
+application-label-km:'example'
+application-label-kn:'example'
+application-label-ko:'example'
+application-label-ky:'example'
+application-label-lo:'example'
+application-label-lt:'example'
+application-label-lv:'example'
+application-label-mk:'example'
+application-label-ml:'example'
+application-label-mn:'example'
+application-label-mr:'example'
+application-label-ms:'example'
+application-label-my:'example'
+application-label-nb:'example'
+application-label-ne:'example'
+application-label-nl:'example'
+application-label-or:'example'
+application-label-pa:'example'
+application-label-pl:'example'
+application-label-pt:'example'
+application-label-pt-BR:'example'
+application-label-pt-PT:'example'
+application-label-ro:'example'
+application-label-ru:'example'
+application-label-si:'example'
+application-label-sk:'example'
+application-label-sl:'example'
+application-label-sq:'example'
+application-label-sr:'example'
+application-label-sr-Latn:'example'
+application-label-sv:'example'
+application-label-sw:'example'
+application-label-ta:'example'
+application-label-te:'example'
+application-label-th:'example'
+application-label-tl:'example'
+application-label-tr:'example'
+application-label-uk:'example'
+application-label-ur:'example'
+application-label-uz:'example'
+application-label-vi:'example'
+application-label-zh-CN:'example'
+application-label-zh-HK:'example'
+application-label-zh-TW:'example'
+application-label-zu:'example'
+application-icon-160:'res/mipmap-mdpi-v4/ic_launcher.png'
+application-icon-240:'res/mipmap-hdpi-v4/ic_launcher.png'
+application-icon-320:'res/mipmap-xhdpi-v4/ic_launcher.png'
+application-icon-480:'res/mipmap-xxhdpi-v4/ic_launcher.png'
+application-icon-640:'res/mipmap-xxhdpi-v4/ic_launcher.png'
+application: label='example' icon='res/mipmap-mdpi-v4/ic_launcher.png'
+application-debuggable
+launchable-activity: name='com.example.MainActivity'  label='example' icon=''
+feature-group: label=''
+  uses-feature: name='android.hardware.faketouch'
+  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'
+main
+other-activities
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--' 'af' 'am' 'ar' 'as' 'az' 'be' 'bg' 'bn' 'bs' 'ca' 'cs' 'da' 'de' 'el' 'en-AU' 'en-CA' 'en-GB' 'en-IN' 'en-XC' 'es' 'es-US' 'et' 'eu' 'fa' 'fi' 'fr' 'fr-CA' 'gl' 'gu' 'hi' 'hr' 'hu' 'hy' 'in' 'is' 'it' 'iw' 'ja' 'ka' 'kk' 'km' 'kn' 'ko' 'ky' 'lo' 'lt' 'lv' 'mk' 'ml' 'mn' 'mr' 'ms' 'my' 'nb' 'ne' 'nl' 'or' 'pa' 'pl' 'pt' 'pt-BR' 'pt-PT' 'ro' 'ru' 'si' 'sk' 'sl' 'sq' 'sr' 'sr-Latn' 'sv' 'sw' 'ta' 'te' 'th' 'tl' 'tr' 'uk' 'ur' 'uz' 'vi' 'zh-CN' 'zh-HK' 'zh-TW' 'zu'
+densities: '160' '240' '320' '480' '640'
+native-code: 'arm64-v8a' 'armeabi-v7a' 'x86' 'x86_64'
+
+Jan 10 17:19:10 ROOT_DESCRIBE_BLOCK[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onRunDescribeStart({ name: 'ROOT_DESCRIBE_BLOCK' })
+Jan 10 17:19:10 detox[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeTerminateApp({ deviceId: 'RFCR90M7DPD', bundleId: 'com.detox.rn.example' })
+Jan 10 17:19:10 detox[8934] DEBUG: [EXEC_CMD, #4] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "am force-stop com.detox.rn.example"
+Jan 10 17:19:10 detox[8934] TRACE: [EXEC_SUCCESS, #4] 
+Jan 10 17:19:10 detox[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTerminateApp({ deviceId: 'RFCR90M7DPD', bundleId: 'com.detox.rn.example' })
+Jan 10 17:19:10 detox[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeLaunchApp({
+  deviceId: 'RFCR90M7DPD',
+  bundleId: 'com.detox.rn.example',
+  launchArgs: {
+    detoxServer: 'ws://localhost:49946',
+    detoxSessionId: 'a4c8334c-c012-0a74-4f9a-40c543d098c7'
+  }
+})
+Jan 10 17:19:10 detox[8934] DEBUG: [EXEC_CMD, #5] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "date +\"%m-%d %T.000\""
+Jan 10 17:19:10 detox[8934] TRACE: [EXEC_SUCCESS, #5] 01-10 17:19:10.000
+
+Jan 10 17:19:10 detox[8934] DEBUG: [EXEC_CMD, #6] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD reverse tcp:49946 tcp:49946
+Jan 10 17:19:10 detox[8934] TRACE: [EXEC_SUCCESS, #6] 49946
+
+Jan 10 17:19:10 detox[8934] DEBUG: [EXEC_CMD, #7] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "pm list instrumentation"
+Jan 10 17:19:10 detox[8934] TRACE: [EXEC_SUCCESS, #7] instrumentation:com.detox.rn.example.test/com.example.DetoxTestAppJUnitRunner (target=com.detox.rn.example)
+instrumentation:com.microsoft.office.officehubrow/android.test.InstrumentationTestRunner (target=com.microsoft.office.msohttp.tests)
+instrumentation:com.samsung.android.app.dressroom/androidx.test.runner.AndroidJUnitRunner (target=com.samsung.android.app.dressroom)
+instrumentation:com.whereismytrain.android/com.google.android.apps.common.testing.testrunner.Google3InstrumentationTestRunner (target=com.whereismytrain.wimt)
+
+Jan 10 17:19:10 detox[8934] DEBUG: [SPAWN_CMD, #8, cpid=8948] /Users/puneetbajaj/Library/Android/sdk/platform-tools/adb -s RFCR90M7DPD shell am instrument -w -r -e detoxServer ws://localhost:49946 -e detoxSessionId a4c8334c-c012-0a74-4f9a-40c543d098c7 -e debug false com.detox.rn.example.test/com.example.DetoxTestAppJUnitRunner
+Jan 10 17:19:11 detox[8934] DEBUG: [EXEC_CMD, #9] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "ps | grep \"com\.detox\.rn\.example$\""
+Jan 10 17:19:13 detox[8934] TRACE: [EXEC_SUCCESS, #9] u0_a306      13095 17164 14752388 70128 0                   0 S com.detox.rn.example
+
+Jan 10 17:19:13 detox[13095] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onLaunchApp({
+  deviceId: 'RFCR90M7DPD',
+  bundleId: 'com.detox.rn.example',
+  launchArgs: {
+    detoxServer: 'ws://localhost:49946',
+    detoxSessionId: 'a4c8334c-c012-0a74-4f9a-40c543d098c7'
+  },
+  pid: 13095
+})
+Jan 10 17:19:13 detox[8934] TRACE: [ARTIFACT_START] starting ADBLogcatRecording
+Jan 10 17:19:13 detox[8934] DEBUG: [SPAWN_CMD, #10, cpid=8953] /Users/puneetbajaj/Library/Android/sdk/platform-tools/adb -s RFCR90M7DPD shell "logcat -T \"01-10 17:19:10.000\" --pid=13095 -f /sdcard/17198155_0.log"
+Jan 10 17:19:13 detox[8934] DEBUG: [EXEC_CMD, #11] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell du /sdcard/17198155_0.log
+Jan 10 17:19:13 detox[8934] TRACE: [EXEC_SUCCESS, #11] 0	/sdcard/17198155_0.log
+
+Jan 10 17:19:27 detox[8934] TRACE: [SPAWN_STDOUT, #8, cpid=8948] INSTRUMENTATION_STATUS: class=com.example.DetoxTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.example.DetoxTest:
+INSTRUMENTATION_STATUS: test=runDetoxTests
+INSTRUMENTATION_STATUS_CODE: 1
+
+Jan 10 17:19:28 detox[8934] DEBUG: [WSS_CONNECTION, #49983] registered a new connection.
+Jan 10 17:19:28 detox[8934] TRACE: [WSS_GET_FROM, #49983] {"messageId":0,"type":"login","params":{"role":"app","sessionId":"a4c8334c-c012-0a74-4f9a-40c543d098c7"}}
+Jan 10 17:19:28 detox[8934] TRACE: [WSS_SEND_TO, #app] {"messageId":0,"type":"loginSuccess","params":{"testerConnected":true,"appConnected":true}}
+Jan 10 17:19:28 detox[8934] TRACE: [SESSION_JOINED] app joined session a4c8334c-c012-0a74-4f9a-40c543d098c7
+Jan 10 17:19:28 detox[8934] TRACE: [WSS_SEND_TO, #tester] {"type":"appConnected"}
+Jan 10 17:19:28 detox[8934] TRACE: [WS_MESSAGE] {"type":"appConnected"}
+ 
+Jan 10 17:19:28 detox[8934] TRACE: [WS_SEND] {"type":"isReady","params":{},"messageId":-1000}
+Jan 10 17:19:28 detox[8934] TRACE: [WSS_GET_FROM, #tester] {"type":"isReady","params":{},"messageId":-1000}
+Jan 10 17:19:28 detox[8934] TRACE: [WSS_SEND_TO, #app] {"type":"isReady","params":{},"messageId":-1000}
+Jan 10 17:19:30 detox[8934] TRACE: [WSS_GET_FROM, #app] {"messageId":-1000,"type":"ready","params":{}}
+Jan 10 17:19:30 detox[8934] TRACE: [WSS_SEND_TO, #tester] {"messageId":-1000,"type":"ready","params":{}}
+Jan 10 17:19:30 detox[8934] TRACE: [WS_MESSAGE] {"messageId":-1000,"type":"ready","params":{}}
+ 
+Jan 10 17:19:30 detox[13095] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onAppReady({
+  deviceId: 'RFCR90M7DPD',
+  bundleId: 'com.detox.rn.example',
+  pid: 13095
+})
+Jan 10 17:19:30 Example (hello)[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onRunDescribeStart({ name: 'Example (hello)' })
+Jan 10 17:19:30 detox[8934] INFO:  [97mExample (hello)[39m is assigned to [94mAttachedDevice:RFCR90M7DPD[39m
+Jan 10 17:19:30 detox[8934] INFO:  [1m[37mExample (hello): [39m[22m[90mshould have welcome screen[39m
+Jan 10 17:19:30 detox[8934] TRACE: [DETOX_BEFORE_EACH] running test: "Example (hello) should have welcome screen"
+Jan 10 17:19:30 detox[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestStart({
+  title: 'should have welcome screen',
+  parent: 'Example (hello)',
+  fullName: 'Example (hello) should have welcome screen',
+  functionCode: 'async () => {\n' +
+    "        await (0, detox_1.expect)((0, detox_1.element)(detox_1.by.id('welcome'))).toBeVisible();\n" +
+    '    }',
+  invocations: 1,
+  status: 'running'
+})
+Jan 10 17:19:30 detox[8934] TRACE: [ARTIFACT_STOP] stopping ADBLogcatRecording
+Jan 10 17:19:30 detox[8934] TRACE: [ARTIFACT_START] starting ADBScreencapRecording
+Jan 10 17:19:30 detox[8934] DEBUG: [EXEC_CMD, #12] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "screencap /sdcard/17198155_1.png"
+Jan 10 17:19:30 detox[8934] DEBUG: [EXEC_CMD, #13] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "date +\"%m-%d %T.000\""
+Jan 10 17:19:30 detox[8934] TRACE: [WSS_GET_FROM, #app] {"messageId":-1000,"type":"ready","params":{}}
+Jan 10 17:19:30 detox[8934] TRACE: [WSS_SEND_TO, #tester] {"messageId":-1000,"type":"ready","params":{}}
+Jan 10 17:19:30 detox[8934] TRACE: [WS_MESSAGE] {"messageId":-1000,"type":"ready","params":{}}
+ 
+Jan 10 17:19:30 detox[8934] TRACE: [EXEC_SUCCESS, #13] 01-10 17:19:30.000
+
+Jan 10 17:19:30 detox[8953] TRACE: [SPAWN_KILL] sending SIGINT to: /Users/puneetbajaj/Library/Android/sdk/platform-tools/adb -s RFCR90M7DPD shell logcat -T "01-10 17:19:10.000" --pid=13095 -f /sdcard/17198155_0.log
+Jan 10 17:19:30 detox[8934] DEBUG: [SPAWN_END, #10, cpid=8953] /Users/puneetbajaj/Library/Android/sdk/platform-tools/adb -s RFCR90M7DPD shell "logcat -T \"01-10 17:19:10.000\" --pid=13095 -f /sdcard/17198155_0.log" terminated with SIGINT
+Jan 10 17:19:30 detox[8934] TRACE: [ARTIFACT_START] starting ADBLogcatRecording
+Jan 10 17:19:30 detox[8934] DEBUG: [SPAWN_CMD, #14, cpid=8964] /Users/puneetbajaj/Library/Android/sdk/platform-tools/adb -s RFCR90M7DPD shell "logcat -T \"01-10 17:19:30.000\" --pid=13095 -f /sdcard/17198155_2.log"
+Jan 10 17:19:31 detox[8934] DEBUG: [EXEC_CMD, #15] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell du /sdcard/17198155_2.log
+Jan 10 17:19:31 detox[8934] TRACE: [EXEC_SUCCESS, #15] 0	/sdcard/17198155_2.log
+
+Jan 10 17:19:31 detox[8934] TRACE: [EXEC_SUCCESS, #12] 
+Jan 10 17:19:31 detox[8934] TRACE: [ARTIFACT_STOP] stopping ADBScreencapRecording
+Jan 10 17:19:31 detox[8934] TRACE: [WS_SEND] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Jan 10 17:19:31 detox[8934] TRACE: [WSS_GET_FROM, #tester] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Jan 10 17:19:31 detox[8934] TRACE: [WSS_SEND_TO, #app] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Jan 10 17:19:33 detox[8934] TRACE: [WSS_GET_FROM, #app] {"messageId":-1000,"type":"ready","params":{}}
+Jan 10 17:19:33 detox[8934] TRACE: [WSS_SEND_TO, #tester] {"messageId":-1000,"type":"ready","params":{}}
+Jan 10 17:19:33 detox[8934] TRACE: [WS_MESSAGE] {"messageId":-1000,"type":"ready","params":{}}
+ 
+Jan 10 17:19:33 detox[8934] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["welcome"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]},"messageId":1}
+Jan 10 17:19:33 detox[8934] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["welcome"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]},"messageId":1}
+Jan 10 17:19:33 detox[8934] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["welcome"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]},"messageId":1}
+Jan 10 17:19:33 detox[8934] TRACE: [WSS_GET_FROM, #app] {"messageId":1,"type":"invokeResult","params":{"result":null}}
+Jan 10 17:19:33 detox[8934] TRACE: [WSS_SEND_TO, #tester] {"messageId":1,"type":"invokeResult","params":{"result":null}}
+Jan 10 17:19:33 detox[8934] TRACE: [WS_MESSAGE] {"messageId":1,"type":"invokeResult","params":{"result":null}}
+ 
+Jan 10 17:19:33 detox[8934] TRACE: [DETOX_AFTER_EACH] passed test: "Example (hello) should have welcome screen"
+Jan 10 17:19:33 detox[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestDone({
+  title: 'should have welcome screen',
+  parent: 'Example (hello)',
+  fullName: 'Example (hello) should have welcome screen',
+  functionCode: 'async () => {\n' +
+    "        await (0, detox_1.expect)((0, detox_1.element)(detox_1.by.id('welcome'))).toBeVisible();\n" +
+    '    }',
+  invocations: 1,
+  status: 'passed',
+  errors: undefined,
+  asyncError: undefined,
+  timedOut: false
+})
+Jan 10 17:19:33 detox[8934] TRACE: [ARTIFACT_STOP] stopping ADBLogcatRecording
+Jan 10 17:19:33 detox[8934] TRACE: [ARTIFACT_START] starting ADBScreencapRecording
+Jan 10 17:19:33 detox[8934] DEBUG: [EXEC_CMD, #16] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "screencap /sdcard/17198155_3.png"
+Jan 10 17:19:33 detox[8934] DEBUG: [EXEC_CMD, #17] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "date +\"%m-%d %T.000\""
+Jan 10 17:19:33 detox[8934] TRACE: [EXEC_SUCCESS, #17] 01-10 17:19:33.000
+
+Jan 10 17:19:33 detox[8964] TRACE: [SPAWN_KILL] sending SIGINT to: /Users/puneetbajaj/Library/Android/sdk/platform-tools/adb -s RFCR90M7DPD shell logcat -T "01-10 17:19:30.000" --pid=13095 -f /sdcard/17198155_2.log
+Jan 10 17:19:33 detox[8934] DEBUG: [SPAWN_END, #14, cpid=8964] /Users/puneetbajaj/Library/Android/sdk/platform-tools/adb -s RFCR90M7DPD shell "logcat -T \"01-10 17:19:30.000\" --pid=13095 -f /sdcard/17198155_2.log" terminated with SIGINT
+Jan 10 17:19:33 detox[8934] TRACE: [ARTIFACT_SAVE] saving ADBLogcatRecording to: artifacts-path/✓ Example (hello) should have welcome screen/device.log
+Jan 10 17:19:33 detox[8934] DEBUG: [EXEC_CMD, #18] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD pull "/sdcard/17198155_2.log" "artifacts-path/✓ Example (hello) should have welcome screen/device.log"
+Jan 10 17:19:33 detox[8934] TRACE: [EXEC_SUCCESS, #18] /sdcard/17198155_2.log: 1 file pulled, 0 skipped. 3.2 MB/s (8192 bytes in 0.002s)
+
+Jan 10 17:19:33 detox[8934] DEBUG: [EXEC_CMD, #19] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "rm  \"/sdcard/17198155_2.log\""
+Jan 10 17:19:33 detox[8934] TRACE: [EXEC_SUCCESS, #19] 
+Jan 10 17:19:33 detox[8934] TRACE: [ARTIFACT_SAVE] saving ADBLogcatRecording to: artifacts-path/RFCR90M7DPD 2023-01-10 11-49-33Z.startup.log
+Jan 10 17:19:33 detox[8934] DEBUG: [EXEC_CMD, #20] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD pull "/sdcard/17198155_0.log" "artifacts-path/RFCR90M7DPD 2023-01-10 11-49-33Z.startup.log"
+Jan 10 17:19:33 detox[8934] TRACE: [EXEC_SUCCESS, #20] /sdcard/17198155_0.log: 1 file pulled, 0 skipped. 9.1 MB/s (40960 bytes in 0.004s)
+
+Jan 10 17:19:33 detox[8934] DEBUG: [EXEC_CMD, #21] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "rm  \"/sdcard/17198155_0.log\""
+Jan 10 17:19:34 detox[8934] TRACE: [EXEC_SUCCESS, #21] 
+Jan 10 17:19:34 detox[8934] TRACE: [EXEC_SUCCESS, #16] 
+Jan 10 17:19:34 detox[8934] TRACE: [ARTIFACT_STOP] stopping ADBScreencapRecording
+Jan 10 17:19:34 detox[8934] INFO:  [1m[37mExample (hello): [39m[22m[90mshould have welcome screen[39m[90m [[32mOK[90m][39m
+Jan 10 17:19:34 detox[8934] INFO:  [1m[37mExample (hello): [39m[22m[90mshould show hello screen after tap[39m
+Jan 10 17:19:34 detox[8934] TRACE: [DETOX_BEFORE_EACH] running test: "Example (hello) should show hello screen after tap"
+Jan 10 17:19:34 detox[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestStart({
+  title: 'should show hello screen after tap',
+  parent: 'Example (hello)',
+  fullName: 'Example (hello) should show hello screen after tap',
+  functionCode: 'async () => {\n' +
+    "        await (0, detox_1.element)(detox_1.by.id('hello_button')).tap();\n" +
+    "        await (0, detox_1.expect)((0, detox_1.element)(detox_1.by.text('Hello!!!'))).toBeVisible();\n" +
+    '    }',
+  invocations: 1,
+  status: 'running'
+})
+Jan 10 17:19:34 detox[8934] TRACE: [ARTIFACT_START] starting ADBLogcatRecording
+Jan 10 17:19:34 detox[8934] DEBUG: [SPAWN_CMD, #22, cpid=8974] /Users/puneetbajaj/Library/Android/sdk/platform-tools/adb -s RFCR90M7DPD shell "logcat -T \"01-10 17:19:33.000\" --pid=13095 -f /sdcard/17198155_4.log"
+Jan 10 17:19:34 detox[8934] TRACE: [ARTIFACT_START] starting ADBScreencapRecording
+Jan 10 17:19:34 detox[8934] DEBUG: [EXEC_CMD, #23] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "screencap /sdcard/17198155_5.png"
+Jan 10 17:19:34 detox[8934] TRACE: [ARTIFACT_SAVE] saving ADBScreencapRecording to: artifacts-path/✓ Example (hello) should have welcome screen/testStart.png
+Jan 10 17:19:34 detox[8934] DEBUG: [EXEC_CMD, #24] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD pull "/sdcard/17198155_1.png" "artifacts-path/✓ Example (hello) should have welcome screen/testStart.png"
+Jan 10 17:19:34 detox[8934] TRACE: [EXEC_SUCCESS, #24] /sdcard/17198155_1.png: 1 file pulled, 0 skipped. 13.4 MB/s (53375 bytes in 0.004s)
+
+Jan 10 17:19:34 detox[8934] DEBUG: [EXEC_CMD, #25] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "rm  \"/sdcard/17198155_1.png\""
+Jan 10 17:19:34 detox[8934] TRACE: [EXEC_SUCCESS, #25] 
+Jan 10 17:19:34 detox[8934] TRACE: [ARTIFACT_SAVE] saving ADBScreencapRecording to: artifacts-path/✓ Example (hello) should have welcome screen/testDone.png
+Jan 10 17:19:34 detox[8934] DEBUG: [EXEC_CMD, #26] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD pull "/sdcard/17198155_3.png" "artifacts-path/✓ Example (hello) should have welcome screen/testDone.png"
+Jan 10 17:19:34 detox[8934] TRACE: [EXEC_SUCCESS, #26] /sdcard/17198155_3.png: 1 file pulled, 0 skipped. 7.4 MB/s (53386 bytes in 0.007s)
+
+Jan 10 17:19:34 detox[8934] DEBUG: [EXEC_CMD, #27] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "rm  \"/sdcard/17198155_3.png\""
+Jan 10 17:19:34 detox[8934] DEBUG: [EXEC_CMD, #28] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell du /sdcard/17198155_4.log
+Jan 10 17:19:34 detox[8934] TRACE: [EXEC_SUCCESS, #27] 
+Jan 10 17:19:34 detox[8934] TRACE: [EXEC_SUCCESS, #28] 0	/sdcard/17198155_4.log
+
+Jan 10 17:19:34 detox[8934] TRACE: [EXEC_SUCCESS, #23] 
+Jan 10 17:19:34 detox[8934] TRACE: [ARTIFACT_STOP] stopping ADBScreencapRecording
+Jan 10 17:19:34 detox[8934] TRACE: [WS_SEND] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Jan 10 17:19:34 detox[8934] TRACE: [WSS_GET_FROM, #tester] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Jan 10 17:19:34 detox[8934] TRACE: [WSS_SEND_TO, #app] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Jan 10 17:19:36 detox[8934] TRACE: [WSS_GET_FROM, #app] {"messageId":-1000,"type":"ready","params":{}}
+Jan 10 17:19:36 detox[8934] TRACE: [WSS_SEND_TO, #tester] {"messageId":-1000,"type":"ready","params":{}}
+Jan 10 17:19:36 detox[8934] TRACE: [WS_MESSAGE] {"messageId":-1000,"type":"ready","params":{}}
+ 
+Jan 10 17:19:36 detox[8934] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["hello_button"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":2}
+Jan 10 17:19:36 detox[8934] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["hello_button"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":2}
+Jan 10 17:19:36 detox[8934] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["hello_button"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":2}
+Jan 10 17:19:37 detox[8934] TRACE: [WSS_GET_FROM, #app] {"messageId":2,"type":"invokeResult","params":{"result":null}}
+Jan 10 17:19:37 detox[8934] TRACE: [WSS_SEND_TO, #tester] {"messageId":2,"type":"invokeResult","params":{"result":null}}
+Jan 10 17:19:37 detox[8934] TRACE: [WS_MESSAGE] {"messageId":2,"type":"invokeResult","params":{"result":null}}
+ 
+Jan 10 17:19:37 detox[8934] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Hello!!!"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]},"messageId":3}
+Jan 10 17:19:37 detox[8934] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Hello!!!"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]},"messageId":3}
+Jan 10 17:19:37 detox[8934] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Hello!!!"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]},"messageId":3}
+Jan 10 17:19:37 detox[8934] TRACE: [WSS_GET_FROM, #app] {"messageId":3,"type":"testFailed","params":{"details":"'(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)' doesn't match the selected view.\nExpected: (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)\n     Got: was null\n"}}
+Jan 10 17:19:37 detox[8934] TRACE: [WSS_SEND_TO, #tester] {"messageId":3,"type":"testFailed","params":{"details":"'(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)' doesn't match the selected view.\nExpected: (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)\n     Got: was null\n"}}
+Jan 10 17:19:37 detox[8934] TRACE: [WS_MESSAGE] {"messageId":3,"type":"testFailed","params":{"details":"'(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)' doesn't match the selected view.\nExpected: (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)\n     Got: was null\n"}}
+ 
+Jan 10 17:19:37 detox[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestFnFailure({
+  error: Test Failed: '(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)' doesn't match the selected view.
+  Expected: (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)
+       Got: was null
+  
+      at Object.<anonymous> (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/e2e/app-hello.e2e.ts:14:48)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+    name: 'DetoxRuntimeError'
+  }
+})
+Jan 10 17:19:37 detox[8934] TRACE: [ARTIFACT_START] starting ADBScreencapRecording
+Jan 10 17:19:37 detox[8934] DEBUG: [EXEC_CMD, #29] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "screencap /sdcard/17198155_6.png"
+Jan 10 17:19:38 detox[8934] TRACE: [EXEC_SUCCESS, #29] 
+Jan 10 17:19:38 detox[8934] TRACE: [ARTIFACT_STOP] stopping ADBScreencapRecording
+Jan 10 17:19:38 detox[8934] TRACE: [DETOX_AFTER_EACH] failed test: "Example (hello) should show hello screen after tap"
+Jan 10 17:19:38 detox[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestDone({
+  title: 'should show hello screen after tap',
+  parent: 'Example (hello)',
+  fullName: 'Example (hello) should show hello screen after tap',
+  functionCode: 'async () => {\n' +
+    "        await (0, detox_1.element)(detox_1.by.id('hello_button')).tap();\n" +
+    "        await (0, detox_1.expect)((0, detox_1.element)(detox_1.by.text('Hello!!!'))).toBeVisible();\n" +
+    '    }',
+  invocations: 1,
+  status: 'failed',
+  errors: [
+    [
+      [DetoxRuntimeError],
+      ErrorWithStack: 
+          at /Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/e2e/app-hello.e2e.ts:12:3
+          at _dispatchDescribe (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/node_modules/jest-circus/build/index.js:105:26)
+          at describe (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/node_modules/jest-circus/build/index.js:60:5)
+          at Object.<anonymous> (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/e2e/app-hello.e2e.ts:3:1)
+          at Runtime._execModule (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/node_modules/jest-runtime/build/index.js:1714:24)
+          at Runtime._loadModule (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/node_modules/jest-runtime/build/index.js:1223:12)
+          at Runtime.requireModule (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/node_modules/jest-runtime/build/index.js:1047:12)
+          at jestAdapter (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:89:13)
+          at processTicksAndRejections (internal/process/task_queues.js:97:5)
+          at runTestInternal (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/node_modules/jest-runner/build/runTest.js:411:16)
+    ]
+  ],
+  asyncError: undefined,
+  timedOut: false
+})
+Jan 10 17:19:38 detox[8934] TRACE: [ARTIFACT_STOP] stopping ADBLogcatRecording
+Jan 10 17:19:38 detox[8934] TRACE: [ARTIFACT_START] starting ADBScreencapRecording
+Jan 10 17:19:38 detox[8934] DEBUG: [EXEC_CMD, #30] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "screencap /sdcard/17198155_7.png"
+Jan 10 17:19:38 detox[8934] DEBUG: [EXEC_CMD, #31] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "date +\"%m-%d %T.000\""
+Jan 10 17:19:38 detox[8934] TRACE: [EXEC_SUCCESS, #31] 01-10 17:19:37.000
+
+Jan 10 17:19:38 detox[8974] TRACE: [SPAWN_KILL] sending SIGINT to: /Users/puneetbajaj/Library/Android/sdk/platform-tools/adb -s RFCR90M7DPD shell logcat -T "01-10 17:19:33.000" --pid=13095 -f /sdcard/17198155_4.log
+Jan 10 17:19:38 detox[8934] DEBUG: [SPAWN_END, #22, cpid=8974] /Users/puneetbajaj/Library/Android/sdk/platform-tools/adb -s RFCR90M7DPD shell "logcat -T \"01-10 17:19:33.000\" --pid=13095 -f /sdcard/17198155_4.log" terminated with SIGINT
+Jan 10 17:19:38 detox[8934] TRACE: [ARTIFACT_SAVE] saving ADBLogcatRecording to: artifacts-path/✗ Example (hello) should show hello screen after tap/device.log
+Jan 10 17:19:38 detox[8934] DEBUG: [EXEC_CMD, #32] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD pull "/sdcard/17198155_4.log" "artifacts-path/✗ Example (hello) should show hello screen after tap/device.log"
+Jan 10 17:19:38 detox[8934] TRACE: [EXEC_SUCCESS, #32] /sdcard/17198155_4.log: 1 file pulled, 0 skipped. 3.8 MB/s (16384 bytes in 0.004s)
+
+Jan 10 17:19:38 detox[8934] DEBUG: [EXEC_CMD, #33] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "rm  \"/sdcard/17198155_4.log\""
+Jan 10 17:19:38 detox[8934] TRACE: [EXEC_SUCCESS, #33] 
+Jan 10 17:19:38 detox[8934] TRACE: [EXEC_SUCCESS, #30] 
+Jan 10 17:19:38 detox[8934] TRACE: [ARTIFACT_STOP] stopping ADBScreencapRecording
+Jan 10 17:19:38 detox[8934] INFO:  [1m[37mExample (hello): [39m[22m[90mshould show hello screen after tap[39m[90m [[31mFAIL[90m][39m
+Jan 10 17:19:38 detox[8934] INFO:  [1m[37mExample (hello): [39m[22m[90mshould show world screen after tap[39m
+Jan 10 17:19:38 detox[8934] TRACE: [DETOX_BEFORE_EACH] running test: "Example (hello) should show world screen after tap"
+Jan 10 17:19:38 detox[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestStart({
+  title: 'should show world screen after tap',
+  parent: 'Example (hello)',
+  fullName: 'Example (hello) should show world screen after tap',
+  functionCode: 'async () => {\n' +
+    "        await (0, detox_1.element)(detox_1.by.id('world_button')).tap();\n" +
+    "        await (0, detox_1.expect)((0, detox_1.element)(detox_1.by.text('World!!!'))).toBeVisible();\n" +
+    '    }',
+  invocations: 1,
+  status: 'running'
+})
+Jan 10 17:19:38 detox[8934] TRACE: [ARTIFACT_START] starting ADBLogcatRecording
+Jan 10 17:19:38 detox[8934] DEBUG: [SPAWN_CMD, #34, cpid=8993] /Users/puneetbajaj/Library/Android/sdk/platform-tools/adb -s RFCR90M7DPD shell "logcat -T \"01-10 17:19:37.000\" --pid=13095 -f /sdcard/17198155_8.log"
+Jan 10 17:19:38 detox[8934] TRACE: [ARTIFACT_START] starting ADBScreencapRecording
+Jan 10 17:19:38 detox[8934] DEBUG: [EXEC_CMD, #35] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "screencap /sdcard/17198155_9.png"
+Jan 10 17:19:38 detox[8934] TRACE: [ARTIFACT_SAVE] saving ADBScreencapRecording to: artifacts-path/✗ Example (hello) should show hello screen after tap/testStart.png
+Jan 10 17:19:38 detox[8934] DEBUG: [EXEC_CMD, #36] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD pull "/sdcard/17198155_5.png" "artifacts-path/✗ Example (hello) should show hello screen after tap/testStart.png"
+Jan 10 17:19:38 detox[8934] TRACE: [EXEC_SUCCESS, #36] /sdcard/17198155_5.png: 1 file pulled, 0 skipped. 7.3 MB/s (53386 bytes in 0.007s)
+
+Jan 10 17:19:38 detox[8934] DEBUG: [EXEC_CMD, #37] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "rm  \"/sdcard/17198155_5.png\""
+Jan 10 17:19:38 detox[8934] TRACE: [EXEC_SUCCESS, #37] 
+Jan 10 17:19:38 detox[8934] TRACE: [ARTIFACT_SAVE] saving ADBScreencapRecording to: artifacts-path/✗ Example (hello) should show hello screen after tap/testDone.png
+Jan 10 17:19:38 detox[8934] DEBUG: [EXEC_CMD, #38] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD pull "/sdcard/17198155_7.png" "artifacts-path/✗ Example (hello) should show hello screen after tap/testDone.png"
+Jan 10 17:19:38 detox[8934] TRACE: [EXEC_SUCCESS, #38] /sdcard/17198155_7.png: 1 file pulled, 0 skipped. 14.0 MB/s (52391 bytes in 0.004s)
+
+Jan 10 17:19:38 detox[8934] DEBUG: [EXEC_CMD, #39] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "rm  \"/sdcard/17198155_7.png\""
+Jan 10 17:19:38 detox[8934] TRACE: [EXEC_SUCCESS, #39] 
+Jan 10 17:19:38 detox[8934] TRACE: [ARTIFACT_SAVE] saving ADBScreencapRecording to: artifacts-path/✗ Example (hello) should show hello screen after tap/testFnFailure.png
+Jan 10 17:19:38 detox[8934] DEBUG: [EXEC_CMD, #40] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD pull "/sdcard/17198155_6.png" "artifacts-path/✗ Example (hello) should show hello screen after tap/testFnFailure.png"
+Jan 10 17:19:38 detox[8934] TRACE: [EXEC_SUCCESS, #40] /sdcard/17198155_6.png: 1 file pulled, 0 skipped. 8.2 MB/s (52391 bytes in 0.006s)
+
+Jan 10 17:19:38 detox[8934] DEBUG: [EXEC_CMD, #41] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "rm  \"/sdcard/17198155_6.png\""
+Jan 10 17:19:38 detox[8934] TRACE: [EXEC_SUCCESS, #41] 
+Jan 10 17:19:38 detox[8934] DEBUG: [EXEC_CMD, #42] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell du /sdcard/17198155_8.log
+Jan 10 17:19:38 detox[8934] TRACE: [EXEC_SUCCESS, #42] 0	/sdcard/17198155_8.log
+
+Jan 10 17:19:38 detox[8934] TRACE: [EXEC_SUCCESS, #35] 
+Jan 10 17:19:38 detox[8934] TRACE: [ARTIFACT_STOP] stopping ADBScreencapRecording
+Jan 10 17:19:38 detox[8934] TRACE: [WS_SEND] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Jan 10 17:19:38 detox[8934] TRACE: [WSS_GET_FROM, #tester] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Jan 10 17:19:38 detox[8934] TRACE: [WSS_SEND_TO, #app] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Jan 10 17:19:40 detox[8934] TRACE: [WSS_GET_FROM, #app] {"messageId":-1000,"type":"ready","params":{}}
+Jan 10 17:19:40 detox[8934] TRACE: [WSS_SEND_TO, #tester] {"messageId":-1000,"type":"ready","params":{}}
+Jan 10 17:19:40 detox[8934] TRACE: [WS_MESSAGE] {"messageId":-1000,"type":"ready","params":{}}
+ 
+Jan 10 17:19:40 detox[8934] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["world_button"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":4}
+Jan 10 17:19:40 detox[8934] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["world_button"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":4}
+Jan 10 17:19:40 detox[8934] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["world_button"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":4}
+Jan 10 17:19:41 detox[8934] TRACE: [WSS_GET_FROM, #app] {"messageId":4,"type":"invokeResult","params":{"result":null}}
+Jan 10 17:19:41 detox[8934] TRACE: [WSS_SEND_TO, #tester] {"messageId":4,"type":"invokeResult","params":{"result":null}}
+Jan 10 17:19:41 detox[8934] TRACE: [WS_MESSAGE] {"messageId":4,"type":"invokeResult","params":{"result":null}}
+ 
+Jan 10 17:19:41 detox[8934] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["World!!!"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]},"messageId":5}
+Jan 10 17:19:41 detox[8934] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["World!!!"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]},"messageId":5}
+Jan 10 17:19:41 detox[8934] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["World!!!"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]},"messageId":5}
+Jan 10 17:19:41 detox[8934] TRACE: [WSS_GET_FROM, #app] {"messageId":5,"type":"testFailed","params":{"details":"'(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)' doesn't match the selected view.\nExpected: (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)\n     Got: was null\n"}}
+Jan 10 17:19:41 detox[8934] TRACE: [WSS_SEND_TO, #tester] {"messageId":5,"type":"testFailed","params":{"details":"'(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)' doesn't match the selected view.\nExpected: (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)\n     Got: was null\n"}}
+Jan 10 17:19:41 detox[8934] TRACE: [WS_MESSAGE] {"messageId":5,"type":"testFailed","params":{"details":"'(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)' doesn't match the selected view.\nExpected: (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)\n     Got: was null\n"}}
+ 
+Jan 10 17:19:41 detox[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestFnFailure({
+  error: Test Failed: '(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)' doesn't match the selected view.
+  Expected: (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)
+       Got: was null
+  
+      at Object.<anonymous> (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/e2e/app-hello.e2e.ts:19:48)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+    name: 'DetoxRuntimeError'
+  }
+})
+Jan 10 17:19:41 detox[8934] TRACE: [ARTIFACT_START] starting ADBScreencapRecording
+Jan 10 17:19:41 detox[8934] DEBUG: [EXEC_CMD, #43] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "screencap /sdcard/17198155_10.png"
+Jan 10 17:19:42 detox[8934] TRACE: [EXEC_SUCCESS, #43] 
+Jan 10 17:19:42 detox[8934] TRACE: [ARTIFACT_STOP] stopping ADBScreencapRecording
+Jan 10 17:19:42 detox[8934] TRACE: [DETOX_AFTER_EACH] failed test: "Example (hello) should show world screen after tap"
+Jan 10 17:19:42 detox[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestDone({
+  title: 'should show world screen after tap',
+  parent: 'Example (hello)',
+  fullName: 'Example (hello) should show world screen after tap',
+  functionCode: 'async () => {\n' +
+    "        await (0, detox_1.element)(detox_1.by.id('world_button')).tap();\n" +
+    "        await (0, detox_1.expect)((0, detox_1.element)(detox_1.by.text('World!!!'))).toBeVisible();\n" +
+    '    }',
+  invocations: 1,
+  status: 'failed',
+  errors: [
+    [
+      [DetoxRuntimeError],
+      ErrorWithStack: 
+          at /Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/e2e/app-hello.e2e.ts:17:3
+          at _dispatchDescribe (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/node_modules/jest-circus/build/index.js:105:26)
+          at describe (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/node_modules/jest-circus/build/index.js:60:5)
+          at Object.<anonymous> (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/e2e/app-hello.e2e.ts:3:1)
+          at Runtime._execModule (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/node_modules/jest-runtime/build/index.js:1714:24)
+          at Runtime._loadModule (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/node_modules/jest-runtime/build/index.js:1223:12)
+          at Runtime.requireModule (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/node_modules/jest-runtime/build/index.js:1047:12)
+          at jestAdapter (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:89:13)
+          at processTicksAndRejections (internal/process/task_queues.js:97:5)
+          at runTestInternal (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/node_modules/jest-runner/build/runTest.js:411:16)
+    ]
+  ],
+  asyncError: undefined,
+  timedOut: false
+})
+Jan 10 17:19:42 detox[8934] TRACE: [ARTIFACT_STOP] stopping ADBLogcatRecording
+Jan 10 17:19:42 detox[8934] TRACE: [ARTIFACT_START] starting ADBScreencapRecording
+Jan 10 17:19:42 detox[8934] DEBUG: [EXEC_CMD, #44] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "screencap /sdcard/17198155_11.png"
+Jan 10 17:19:42 detox[8934] DEBUG: [EXEC_CMD, #45] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "date +\"%m-%d %T.000\""
+Jan 10 17:19:42 detox[8934] TRACE: [EXEC_SUCCESS, #45] 01-10 17:19:41.000
+
+Jan 10 17:19:42 detox[8993] TRACE: [SPAWN_KILL] sending SIGINT to: /Users/puneetbajaj/Library/Android/sdk/platform-tools/adb -s RFCR90M7DPD shell logcat -T "01-10 17:19:37.000" --pid=13095 -f /sdcard/17198155_8.log
+Jan 10 17:19:42 detox[8934] DEBUG: [SPAWN_END, #34, cpid=8993] /Users/puneetbajaj/Library/Android/sdk/platform-tools/adb -s RFCR90M7DPD shell "logcat -T \"01-10 17:19:37.000\" --pid=13095 -f /sdcard/17198155_8.log" terminated with SIGINT
+Jan 10 17:19:42 detox[8934] TRACE: [ARTIFACT_SAVE] saving ADBLogcatRecording to: artifacts-path/✗ Example (hello) should show world screen after tap/device.log
+Jan 10 17:19:42 detox[8934] DEBUG: [EXEC_CMD, #46] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD pull "/sdcard/17198155_8.log" "artifacts-path/✗ Example (hello) should show world screen after tap/device.log"
+Jan 10 17:19:42 detox[8934] TRACE: [EXEC_SUCCESS, #46] /sdcard/17198155_8.log: 1 file pulled, 0 skipped. 6.8 MB/s (24576 bytes in 0.003s)
+
+Jan 10 17:19:42 detox[8934] DEBUG: [EXEC_CMD, #47] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "rm  \"/sdcard/17198155_8.log\""
+Jan 10 17:19:42 detox[8934] TRACE: [EXEC_SUCCESS, #47] 
+Jan 10 17:19:42 detox[8934] TRACE: [EXEC_SUCCESS, #44] 
+Jan 10 17:19:42 detox[8934] TRACE: [ARTIFACT_STOP] stopping ADBScreencapRecording
+Jan 10 17:19:42 detox[8934] INFO:  [1m[37mExample (hello): [39m[22m[90mshould show world screen after tap[39m[90m [[31mFAIL[90m][39m
+Jan 10 17:19:42 Example (hello)[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onRunDescribeFinish({ name: 'Example (hello)' })
+Jan 10 17:19:42 ROOT_DESCRIBE_BLOCK[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onRunDescribeFinish({ name: 'ROOT_DESCRIBE_BLOCK' })
+Jan 10 17:19:42 detox[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeCleanup()
+Jan 10 17:19:42 detox[8934] TRACE: [ARTIFACT_SAVE] saving ADBScreencapRecording to: artifacts-path/✗ Example (hello) should show world screen after tap/testStart.png
+Jan 10 17:19:42 detox[8934] DEBUG: [EXEC_CMD, #48] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD pull "/sdcard/17198155_9.png" "artifacts-path/✗ Example (hello) should show world screen after tap/testStart.png"
+Jan 10 17:19:42 detox[8934] TRACE: [EXEC_SUCCESS, #48] /sdcard/17198155_9.png: 1 file pulled, 0 skipped. 14.6 MB/s (52391 bytes in 0.003s)
+
+Jan 10 17:19:42 detox[8934] DEBUG: [EXEC_CMD, #49] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "rm  \"/sdcard/17198155_9.png\""
+Jan 10 17:19:42 detox[8934] TRACE: [EXEC_SUCCESS, #49] 
+Jan 10 17:19:42 detox[8934] TRACE: [ARTIFACT_SAVE] saving ADBScreencapRecording to: artifacts-path/✗ Example (hello) should show world screen after tap/testDone.png
+Jan 10 17:19:42 detox[8934] DEBUG: [EXEC_CMD, #50] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD pull "/sdcard/17198155_11.png" "artifacts-path/✗ Example (hello) should show world screen after tap/testDone.png"
+Jan 10 17:19:42 detox[8934] TRACE: [EXEC_SUCCESS, #50] /sdcard/17198155_11.png: 1 file pulled, 0 skipped. 11.7 MB/s (52117 bytes in 0.004s)
+
+Jan 10 17:19:42 detox[8934] DEBUG: [EXEC_CMD, #51] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "rm  \"/sdcard/17198155_11.png\""
+Jan 10 17:19:42 detox[8934] TRACE: [EXEC_SUCCESS, #51] 
+Jan 10 17:19:42 detox[8934] TRACE: [ARTIFACT_SAVE] saving ADBScreencapRecording to: artifacts-path/✗ Example (hello) should show world screen after tap/testFnFailure.png
+Jan 10 17:19:42 detox[8934] DEBUG: [EXEC_CMD, #52] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD pull "/sdcard/17198155_10.png" "artifacts-path/✗ Example (hello) should show world screen after tap/testFnFailure.png"
+Jan 10 17:19:43 detox[8934] TRACE: [EXEC_SUCCESS, #52] /sdcard/17198155_10.png: 1 file pulled, 0 skipped. 9.9 MB/s (52117 bytes in 0.005s)
+
+Jan 10 17:19:43 detox[8934] DEBUG: [EXEC_CMD, #53] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "rm  \"/sdcard/17198155_10.png\""
+Jan 10 17:19:43 detox[8934] TRACE: [EXEC_SUCCESS, #53] 
+Jan 10 17:19:43 detox[8934] TRACE: [ARTIFACT_START] starting FileArtifact
+Jan 10 17:19:43 detox[8934] TRACE: [ARTIFACT_STOP] stopping FileArtifact
+Jan 10 17:19:43 detox[8934] TRACE: [ARTIFACT_SAVE] saving FileArtifact to: artifacts-path/detox_pid_8934.json.log { append: true }
+Jan 10 17:19:43 detox[8934] TRACE: [ARTIFACT_START] starting FileArtifact
+Jan 10 17:19:43 detox[8934] TRACE: [ARTIFACT_STOP] stopping FileArtifact
+Jan 10 17:19:43 detox[8934] TRACE: [ARTIFACT_SAVE] saving FileArtifact to: artifacts-path/detox_pid_8934.log { append: true }
+Jan 10 17:19:43 detox[8934] DEBUG: [MOVE_FILE] moving "/private/var/folders/t9/mxs3t0d941j6w_1dm67555qm0000gp/T/7c45a5c0-bc7f-41f1-bd55-972a67aacce6.detox.log" to artifacts-path/detox_pid_8934.log
+Jan 10 17:19:43 detox[8934] DEBUG: [MOVE_FILE] moving "/private/var/folders/t9/mxs3t0d941j6w_1dm67555qm0000gp/T/eb45708d-a13b-4954-8ef5-d92e5696e632.detox.log" to artifacts-path/detox_pid_8934.json.log
+Jan 10 17:19:43 detox[8934] TRACE: [WS_SEND] {"type":"cleanup","params":{"stopRunner":false},"messageId":-49642}
+Jan 10 17:19:43 detox[8934] TRACE: [WSS_GET_FROM, #tester] {"type":"cleanup","params":{"stopRunner":false},"messageId":-49642}
+Jan 10 17:19:43 detox[8934] TRACE: [WSS_SEND_TO, #app] {"type":"cleanup","params":{"stopRunner":false},"messageId":-49642}
+Jan 10 17:19:43 detox[8934] TRACE: [WSS_GET_FROM, #app] {"messageId":-49642,"type":"cleanupDone","params":{}}
+Jan 10 17:19:43 detox[8934] TRACE: [WSS_SEND_TO, #tester] {"messageId":-49642,"type":"cleanupDone","params":{}}
+Jan 10 17:19:43 detox[8934] TRACE: [WS_MESSAGE] {"messageId":-49642,"type":"cleanupDone","params":{}}
+ 
+Jan 10 17:19:43 detox[8948] TRACE: [SPAWN_KILL] sending SIGINT to: /Users/puneetbajaj/Library/Android/sdk/platform-tools/adb -s RFCR90M7DPD shell am instrument -w -r -e detoxServer ws://localhost:49946 -e detoxSessionId a4c8334c-c012-0a74-4f9a-40c543d098c7 -e debug false com.detox.rn.example.test/com.example.DetoxTestAppJUnitRunner
+Jan 10 17:19:43 detox[8934] TRACE: [SESSION_TORN] tester exited session a4c8334c-c012-0a74-4f9a-40c543d098c7
+Jan 10 17:19:43 detox[8934] TRACE: [WSS_SEND_TO, #app] {"type":"testerDisconnected","messageId":-1}
+Jan 10 17:19:43 detox[8934] DEBUG: [SPAWN_END, #8, cpid=8948] /Users/puneetbajaj/Library/Android/sdk/platform-tools/adb -s RFCR90M7DPD shell am instrument -w -r -e detoxServer ws://localhost:49946 -e detoxSessionId a4c8334c-c012-0a74-4f9a-40c543d098c7 -e debug false com.detox.rn.example.test/com.example.DetoxTestAppJUnitRunner terminated with SIGINT
+Jan 10 17:19:43 detox[8934] DEBUG: [EXEC_CMD, #54] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD reverse --remove tcp:49946
+Jan 10 17:19:43 detox[8934] DEBUG: [WSS_CLOSE] Detox server has been closed gracefully
+Jan 10 17:19:43 detox[8934] TRACE: [SESSION_TORN] app exited session a4c8334c-c012-0a74-4f9a-40c543d098c7
+Jan 10 17:19:43 detox[8934] TRACE: [EXEC_SUCCESS, #54] 
+Jan 10 17:19:43 detox[8934] TRACE: [DETOX_CREATE] created a Detox instance with config:
+{
+  appsConfig: {
+    default: {
+      type: 'android.apk',
+      binaryPath: '../app-debug.apk'
+    }
+  },
+  artifactsConfig: {
+    rootDir: 'artifacts-cli/',
+    plugins: {
+      log: {
+        enabled: true,
+        keepOnlyFailedTestsArtifacts: false
+      },
+      screenshot: {
+        enabled: true,
+        shouldTakeAutomaticSnapshots: true,
+        keepOnlyFailedTestsArtifacts: false,
+        takeWhen: {
+          testStart: true,
+          testDone: true,
+          appNotReady: true
+        }
+      },
+      video: {
+        enabled: false,
+        keepOnlyFailedTestsArtifacts: false
+      },
+      instruments: {
+        enabled: false,
+        keepOnlyFailedTestsArtifacts: false
+      },
+      timeline: {
+        enabled: false
+      },
+      uiHierarchy: {
+        enabled: false,
+        keepOnlyFailedTestsArtifacts: false
+      }
+    },
+    pathBuilder: ArtifactPathBuilder {
+      _rootDir: 'artifacts-path'
+    }
+  },
+  behaviorConfig: {
+    init: {
+      reinstallApp: false,
+      exposeGlobals: true
+    },
+    cleanup: {
+      shutdownDevice: false
+    },
+    launchApp: 'auto'
+  },
+  cliConfig: {
+    artifactsLocation: 'artifacts-cli/',
+    configPath: './detox.config.json',
+    loglevel: 'info',
+    reuse: true,
+    useCustomLogger: true
+  },
+  configurationName: 'android.real.debug',
+  deviceConfig: {
+    type: 'android.attached',
+    device: {
+      adbName: 'RFCR90M7DPD'
+    }
+  },
+  runnerConfig: {
+    testRunner: 'jest',
+    runnerConfig: 'e2e/config.json',
+    specs: 'e2e',
+    skipLegacyWorkersInjection: false
+  },
+  sessionConfig: {
+    autoStart: true,
+    sessionId: '800d220d-28aa-415d-23ec-317adbe77cab',
+    debugSynchronization: 10000
+  }
+}
+Jan 10 17:19:43 detox[8934] DEBUG: [WSS_CREATE] Detox server listening on localhost:50115...
+Jan 10 17:19:43 detox[8934] DEBUG: [WSS_CONNECTION, #50116] registered a new connection.
+Jan 10 17:19:43 detox[8934] TRACE: [WS_OPEN] opened web socket to: ws://localhost:50115
+Jan 10 17:19:43 detox[8934] TRACE: [WS_SEND] {"type":"login","params":{"sessionId":"800d220d-28aa-415d-23ec-317adbe77cab","role":"tester"},"messageId":0}
+Jan 10 17:19:43 detox[8934] TRACE: [WSS_GET_FROM, #50116] {"type":"login","params":{"sessionId":"800d220d-28aa-415d-23ec-317adbe77cab","role":"tester"},"messageId":0}
+Jan 10 17:19:43 detox[8934] TRACE: [SESSION_CREATED] created session 800d220d-28aa-415d-23ec-317adbe77cab
+Jan 10 17:19:43 detox[8934] TRACE: [WSS_SEND_TO, #tester] {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+Jan 10 17:19:43 detox[8934] TRACE: [SESSION_JOINED] tester joined session 800d220d-28aa-415d-23ec-317adbe77cab
+Jan 10 17:19:43 detox[8934] TRACE: [WS_MESSAGE] {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+ 
+Jan 10 17:19:43 detox[8934] DEBUG: [EXEC_CMD, #55] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb"  devices
+Jan 10 17:19:43 detox[8934] DEBUG: [EXEC_SUCCESS, #55] List of devices attached
+RFCR90M7DPD	device
+
+
+Jan 10 17:19:43 detox[8934] DEBUG: [DEVICE_LOOKUP] Found a matching & free device RFCR90M7DPD
+Jan 10 17:19:43 detox[8934] DEBUG: [EXEC_CMD, #56] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "dumpsys power | grep \"^[ ]*m[UW].*=\""
+Jan 10 17:19:43 detox[8934] TRACE: [EXEC_SUCCESS, #56]   mWakefulness=Awake
+  mWakefulnessChanging=false
+  mWakeLockSummary=0x1
+  mWakeUpWhenPluggedOrUnpluggedConfig=true
+  mWakeUpWhenPluggedOrUnpluggedInTheaterModeConfig=false
+  mUserActivityTimeoutOverrideFromWindowManager=-1
+  mUserActivityTimeoutForDexOverrideFromWindowManager=-1
+  mUserInactiveOverrideFromWindowManager=false
+  mUserId=0
+  mWakeLockSummary=0x1
+
+Jan 10 17:19:43 detox[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBootDevice({ deviceId: 'RFCR90M7DPD', type: 'device', coldBoot: false })
+Jan 10 17:19:43 detox[8934] DEBUG: [EXEC_CMD, #57] "/Users/puneetbajaj/Library/Android/sdk/build-tools/33.0.1/aapt" dump badging "/Users/puneetbajaj/Desktop/browserstack/detox-session/app-debug.apk"
+Jan 10 17:19:43 detox[8934] TRACE: [EXEC_SUCCESS, #57] package: name='com.detox.rn.example' versionCode='1' versionName='1.0' platformBuildVersionName='12' platformBuildVersionCode='31' compileSdkVersion='31' compileSdkVersionCodename='12'
+sdkVersion:'21'
+targetSdkVersion:'31'
+uses-permission: name='android.permission.INTERNET'
+uses-permission: name='android.permission.SYSTEM_ALERT_WINDOW'
+application-label:'example'
+application-label-af:'example'
+application-label-am:'example'
+application-label-ar:'example'
+application-label-as:'example'
+application-label-az:'example'
+application-label-be:'example'
+application-label-bg:'example'
+application-label-bn:'example'
+application-label-bs:'example'
+application-label-ca:'example'
+application-label-cs:'example'
+application-label-da:'example'
+application-label-de:'example'
+application-label-el:'example'
+application-label-en-AU:'example'
+application-label-en-CA:'example'
+application-label-en-GB:'example'
+application-label-en-IN:'example'
+application-label-en-XC:'example'
+application-label-es:'example'
+application-label-es-US:'example'
+application-label-et:'example'
+application-label-eu:'example'
+application-label-fa:'example'
+application-label-fi:'example'
+application-label-fr:'example'
+application-label-fr-CA:'example'
+application-label-gl:'example'
+application-label-gu:'example'
+application-label-hi:'example'
+application-label-hr:'example'
+application-label-hu:'example'
+application-label-hy:'example'
+application-label-in:'example'
+application-label-is:'example'
+application-label-it:'example'
+application-label-iw:'example'
+application-label-ja:'example'
+application-label-ka:'example'
+application-label-kk:'example'
+application-label-km:'example'
+application-label-kn:'example'
+application-label-ko:'example'
+application-label-ky:'example'
+application-label-lo:'example'
+application-label-lt:'example'
+application-label-lv:'example'
+application-label-mk:'example'
+application-label-ml:'example'
+application-label-mn:'example'
+application-label-mr:'example'
+application-label-ms:'example'
+application-label-my:'example'
+application-label-nb:'example'
+application-label-ne:'example'
+application-label-nl:'example'
+application-label-or:'example'
+application-label-pa:'example'
+application-label-pl:'example'
+application-label-pt:'example'
+application-label-pt-BR:'example'
+application-label-pt-PT:'example'
+application-label-ro:'example'
+application-label-ru:'example'
+application-label-si:'example'
+application-label-sk:'example'
+application-label-sl:'example'
+application-label-sq:'example'
+application-label-sr:'example'
+application-label-sr-Latn:'example'
+application-label-sv:'example'
+application-label-sw:'example'
+application-label-ta:'example'
+application-label-te:'example'
+application-label-th:'example'
+application-label-tl:'example'
+application-label-tr:'example'
+application-label-uk:'example'
+application-label-ur:'example'
+application-label-uz:'example'
+application-label-vi:'example'
+application-label-zh-CN:'example'
+application-label-zh-HK:'example'
+application-label-zh-TW:'example'
+application-label-zu:'example'
+application-icon-160:'res/mipmap-mdpi-v4/ic_launcher.png'
+application-icon-240:'res/mipmap-hdpi-v4/ic_launcher.png'
+application-icon-320:'res/mipmap-xhdpi-v4/ic_launcher.png'
+application-icon-480:'res/mipmap-xxhdpi-v4/ic_launcher.png'
+application-icon-640:'res/mipmap-xxhdpi-v4/ic_launcher.png'
+application: label='example' icon='res/mipmap-mdpi-v4/ic_launcher.png'
+application-debuggable
+launchable-activity: name='com.example.MainActivity'  label='example' icon=''
+feature-group: label=''
+  uses-feature: name='android.hardware.faketouch'
+  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'
+main
+other-activities
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--' 'af' 'am' 'ar' 'as' 'az' 'be' 'bg' 'bn' 'bs' 'ca' 'cs' 'da' 'de' 'el' 'en-AU' 'en-CA' 'en-GB' 'en-IN' 'en-XC' 'es' 'es-US' 'et' 'eu' 'fa' 'fi' 'fr' 'fr-CA' 'gl' 'gu' 'hi' 'hr' 'hu' 'hy' 'in' 'is' 'it' 'iw' 'ja' 'ka' 'kk' 'km' 'kn' 'ko' 'ky' 'lo' 'lt' 'lv' 'mk' 'ml' 'mn' 'mr' 'ms' 'my' 'nb' 'ne' 'nl' 'or' 'pa' 'pl' 'pt' 'pt-BR' 'pt-PT' 'ro' 'ru' 'si' 'sk' 'sl' 'sq' 'sr' 'sr-Latn' 'sv' 'sw' 'ta' 'te' 'th' 'tl' 'tr' 'uk' 'ur' 'uz' 'vi' 'zh-CN' 'zh-HK' 'zh-TW' 'zu'
+densities: '160' '240' '320' '480' '640'
+native-code: 'arm64-v8a' 'armeabi-v7a' 'x86' 'x86_64'
+
+Jan 10 17:19:43 ROOT_DESCRIBE_BLOCK[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onRunDescribeStart({ name: 'ROOT_DESCRIBE_BLOCK' })
+Jan 10 17:19:43 detox[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeTerminateApp({ deviceId: 'RFCR90M7DPD', bundleId: 'com.detox.rn.example' })
+Jan 10 17:19:43 detox[8934] DEBUG: [EXEC_CMD, #58] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "am force-stop com.detox.rn.example"
+Jan 10 17:19:44 detox[8934] TRACE: [EXEC_SUCCESS, #58] 
+Jan 10 17:19:44 detox[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTerminateApp({ deviceId: 'RFCR90M7DPD', bundleId: 'com.detox.rn.example' })
+Jan 10 17:19:44 detox[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeLaunchApp({
+  deviceId: 'RFCR90M7DPD',
+  bundleId: 'com.detox.rn.example',
+  launchArgs: {
+    detoxServer: 'ws://localhost:50115',
+    detoxSessionId: '800d220d-28aa-415d-23ec-317adbe77cab'
+  }
+})
+Jan 10 17:19:44 detox[8934] DEBUG: [EXEC_CMD, #59] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "date +\"%m-%d %T.000\""
+Jan 10 17:19:44 detox[8934] TRACE: [EXEC_SUCCESS, #59] 01-10 17:19:43.000
+
+Jan 10 17:19:44 detox[8934] DEBUG: [EXEC_CMD, #60] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD reverse tcp:50115 tcp:50115
+Jan 10 17:19:44 detox[8934] TRACE: [EXEC_SUCCESS, #60] 50115
+
+Jan 10 17:19:44 detox[8934] DEBUG: [EXEC_CMD, #61] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "pm list instrumentation"
+Jan 10 17:19:44 detox[8934] TRACE: [EXEC_SUCCESS, #61] instrumentation:com.detox.rn.example.test/com.example.DetoxTestAppJUnitRunner (target=com.detox.rn.example)
+instrumentation:com.microsoft.office.officehubrow/android.test.InstrumentationTestRunner (target=com.microsoft.office.msohttp.tests)
+instrumentation:com.samsung.android.app.dressroom/androidx.test.runner.AndroidJUnitRunner (target=com.samsung.android.app.dressroom)
+instrumentation:com.whereismytrain.android/com.google.android.apps.common.testing.testrunner.Google3InstrumentationTestRunner (target=com.whereismytrain.wimt)
+
+Jan 10 17:19:44 detox[8934] DEBUG: [SPAWN_CMD, #62, cpid=9024] /Users/puneetbajaj/Library/Android/sdk/platform-tools/adb -s RFCR90M7DPD shell am instrument -w -r -e detoxServer ws://localhost:50115 -e detoxSessionId 800d220d-28aa-415d-23ec-317adbe77cab -e debug false com.detox.rn.example.test/com.example.DetoxTestAppJUnitRunner
+Jan 10 17:19:44 detox[8934] DEBUG: [EXEC_CMD, #63] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "ps | grep \"com\.detox\.rn\.example$\""
+Jan 10 17:19:45 detox[8934] TRACE: [EXEC_SUCCESS, #63] u0_a306      13721 17164 14752388 70120 0                   0 S com.detox.rn.example
+
+Jan 10 17:19:45 detox[13721] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onLaunchApp({
+  deviceId: 'RFCR90M7DPD',
+  bundleId: 'com.detox.rn.example',
+  launchArgs: {
+    detoxServer: 'ws://localhost:50115',
+    detoxSessionId: '800d220d-28aa-415d-23ec-317adbe77cab'
+  },
+  pid: 13721
+})
+Jan 10 17:19:45 detox[8934] TRACE: [ARTIFACT_START] starting ADBLogcatRecording
+Jan 10 17:19:45 detox[8934] DEBUG: [SPAWN_CMD, #64, cpid=9026] /Users/puneetbajaj/Library/Android/sdk/platform-tools/adb -s RFCR90M7DPD shell "logcat -T \"01-10 17:19:43.000\" --pid=13721 -f /sdcard/17198155_12.log"
+Jan 10 17:19:45 detox[8934] DEBUG: [EXEC_CMD, #65] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell du /sdcard/17198155_12.log
+Jan 10 17:19:45 detox[8934] TRACE: [EXEC_SUCCESS, #65] 0	/sdcard/17198155_12.log
+
+Jan 10 17:20:00 detox[8934] TRACE: [SPAWN_STDOUT, #62, cpid=9024] INSTRUMENTATION_STATUS: class=com.example.DetoxTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.example.DetoxTest:
+INSTRUMENTATION_STATUS: test=runDetoxTests
+INSTRUMENTATION_STATUS_CODE: 1
+
+Jan 10 17:20:00 detox[8934] DEBUG: [WSS_CONNECTION, #50145] registered a new connection.
+Jan 10 17:20:00 detox[8934] TRACE: [WSS_GET_FROM, #50145] {"messageId":0,"type":"login","params":{"role":"app","sessionId":"800d220d-28aa-415d-23ec-317adbe77cab"}}
+Jan 10 17:20:00 detox[8934] TRACE: [WSS_SEND_TO, #app] {"messageId":0,"type":"loginSuccess","params":{"testerConnected":true,"appConnected":true}}
+Jan 10 17:20:00 detox[8934] TRACE: [SESSION_JOINED] app joined session 800d220d-28aa-415d-23ec-317adbe77cab
+Jan 10 17:20:00 detox[8934] TRACE: [WSS_SEND_TO, #tester] {"type":"appConnected"}
+Jan 10 17:20:00 detox[8934] TRACE: [WS_MESSAGE] {"type":"appConnected"}
+ 
+Jan 10 17:20:00 detox[8934] TRACE: [WS_SEND] {"type":"isReady","params":{},"messageId":-1000}
+Jan 10 17:20:00 detox[8934] TRACE: [WSS_GET_FROM, #tester] {"type":"isReady","params":{},"messageId":-1000}
+Jan 10 17:20:00 detox[8934] TRACE: [WSS_SEND_TO, #app] {"type":"isReady","params":{},"messageId":-1000}
+Jan 10 17:20:02 detox[8934] TRACE: [WSS_GET_FROM, #app] {"messageId":-1000,"type":"ready","params":{}}
+Jan 10 17:20:02 detox[8934] TRACE: [WSS_SEND_TO, #tester] {"messageId":-1000,"type":"ready","params":{}}
+Jan 10 17:20:02 detox[8934] TRACE: [WS_MESSAGE] {"messageId":-1000,"type":"ready","params":{}}
+ 
+Jan 10 17:20:02 detox[13721] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onAppReady({
+  deviceId: 'RFCR90M7DPD',
+  bundleId: 'com.detox.rn.example',
+  pid: 13721
+})
+Jan 10 17:20:02 Example (goodbye)[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onRunDescribeStart({ name: 'Example (goodbye)' })
+Jan 10 17:20:02 detox[8934] INFO:  [97mExample (goodbye)[39m is assigned to [94mAttachedDevice:RFCR90M7DPD[39m
+Jan 10 17:20:02 detox[8934] INFO:  [1m[37mExample (goodbye): [39m[22m[90mshould show goodbye screen after tap[39m
+Jan 10 17:20:02 detox[8934] TRACE: [DETOX_BEFORE_EACH] running test: "Example (goodbye) should show goodbye screen after tap"
+Jan 10 17:20:02 detox[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestStart({
+  title: 'should show goodbye screen after tap',
+  parent: 'Example (goodbye)',
+  fullName: 'Example (goodbye) should show goodbye screen after tap',
+  functionCode: 'async () => {\n' +
+    "        await (0, detox_1.element)(detox_1.by.id('goodbye_button')).tap();\n" +
+    "        await (0, detox_1.expect)((0, detox_1.element)(detox_1.by.text('Goodbye, World!!!'))).toBeVisible();\n" +
+    '    }',
+  invocations: 1,
+  status: 'running'
+})
+Jan 10 17:20:02 detox[8934] TRACE: [ARTIFACT_STOP] stopping ADBLogcatRecording
+Jan 10 17:20:02 detox[8934] TRACE: [ARTIFACT_START] starting ADBScreencapRecording
+Jan 10 17:20:02 detox[8934] DEBUG: [EXEC_CMD, #66] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "screencap /sdcard/17198155_13.png"
+Jan 10 17:20:02 detox[8934] DEBUG: [EXEC_CMD, #67] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "date +\"%m-%d %T.000\""
+Jan 10 17:20:02 detox[8934] TRACE: [WSS_GET_FROM, #app] {"messageId":-1000,"type":"ready","params":{}}
+Jan 10 17:20:02 detox[8934] TRACE: [WSS_SEND_TO, #tester] {"messageId":-1000,"type":"ready","params":{}}
+Jan 10 17:20:02 detox[8934] TRACE: [WS_MESSAGE] {"messageId":-1000,"type":"ready","params":{}}
+ 
+Jan 10 17:20:03 detox[8934] TRACE: [EXEC_SUCCESS, #67] 01-10 17:20:02.000
+
+Jan 10 17:20:03 detox[9026] TRACE: [SPAWN_KILL] sending SIGINT to: /Users/puneetbajaj/Library/Android/sdk/platform-tools/adb -s RFCR90M7DPD shell logcat -T "01-10 17:19:43.000" --pid=13721 -f /sdcard/17198155_12.log
+Jan 10 17:20:03 detox[8934] DEBUG: [SPAWN_END, #64, cpid=9026] /Users/puneetbajaj/Library/Android/sdk/platform-tools/adb -s RFCR90M7DPD shell "logcat -T \"01-10 17:19:43.000\" --pid=13721 -f /sdcard/17198155_12.log" terminated with SIGINT
+Jan 10 17:20:03 detox[8934] TRACE: [ARTIFACT_START] starting ADBLogcatRecording
+Jan 10 17:20:03 detox[8934] DEBUG: [SPAWN_CMD, #68, cpid=9040] /Users/puneetbajaj/Library/Android/sdk/platform-tools/adb -s RFCR90M7DPD shell "logcat -T \"01-10 17:20:02.000\" --pid=13721 -f /sdcard/17198155_14.log"
+Jan 10 17:20:03 detox[8934] DEBUG: [EXEC_CMD, #69] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell du /sdcard/17198155_14.log
+Jan 10 17:20:03 detox[8934] TRACE: [EXEC_SUCCESS, #66] 
+Jan 10 17:20:03 detox[8934] TRACE: [ARTIFACT_STOP] stopping ADBScreencapRecording
+Jan 10 17:20:03 detox[8934] TRACE: [WS_SEND] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Jan 10 17:20:03 detox[8934] TRACE: [WSS_GET_FROM, #tester] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Jan 10 17:20:03 detox[8934] TRACE: [WSS_SEND_TO, #app] {"type":"reactNativeReload","params":{},"messageId":-1000}
+Jan 10 17:20:03 detox[8934] TRACE: [EXEC_SUCCESS, #69] 0	/sdcard/17198155_14.log
+
+Jan 10 17:20:04 detox[8934] TRACE: [WSS_GET_FROM, #app] {"messageId":-1000,"type":"ready","params":{}}
+Jan 10 17:20:04 detox[8934] TRACE: [WSS_SEND_TO, #tester] {"messageId":-1000,"type":"ready","params":{}}
+Jan 10 17:20:04 detox[8934] TRACE: [WS_MESSAGE] {"messageId":-1000,"type":"ready","params":{}}
+ 
+Jan 10 17:20:04 detox[8934] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["goodbye_button"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":1}
+Jan 10 17:20:04 detox[8934] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["goodbye_button"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":1}
+Jan 10 17:20:04 detox[8934] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["goodbye_button"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]},"messageId":1}
+Jan 10 17:20:14 detox[8934] TRACE: [WS_SEND] {"type":"currentStatus","params":{},"messageId":2}
+Jan 10 17:20:14 detox[8934] TRACE: [WSS_GET_FROM, #tester] {"type":"currentStatus","params":{},"messageId":2}
+Jan 10 17:20:14 detox[8934] TRACE: [WSS_SEND_TO, #app] {"type":"currentStatus","params":{},"messageId":2}
+Jan 10 17:20:14 detox[8934] TRACE: [WSS_GET_FROM, #app] {"messageId":2,"type":"currentStatusResult","params":{"status":{"app_status":"idle"}}}
+Jan 10 17:20:14 detox[8934] TRACE: [WSS_SEND_TO, #tester] {"messageId":2,"type":"currentStatusResult","params":{"status":{"app_status":"idle"}}}
+Jan 10 17:20:14 detox[8934] TRACE: [WS_MESSAGE] {"messageId":2,"type":"currentStatusResult","params":{"status":{"app_status":"idle"}}}
+ 
+Jan 10 17:20:14 detox[8934] INFO:  [APP_STATUS] The app seems to be idle
+Jan 10 17:20:24 detox[8934] TRACE: [WS_SEND] {"type":"currentStatus","params":{},"messageId":3}
+Jan 10 17:20:24 detox[8934] TRACE: [WSS_GET_FROM, #tester] {"type":"currentStatus","params":{},"messageId":3}
+Jan 10 17:20:24 detox[8934] TRACE: [WSS_SEND_TO, #app] {"type":"currentStatus","params":{},"messageId":3}
+Jan 10 17:20:24 detox[8934] TRACE: [WSS_GET_FROM, #app] {"messageId":3,"type":"currentStatusResult","params":{"status":{"app_status":"idle"}}}
+Jan 10 17:20:24 detox[8934] TRACE: [WSS_SEND_TO, #tester] {"messageId":3,"type":"currentStatusResult","params":{"status":{"app_status":"idle"}}}
+Jan 10 17:20:24 detox[8934] TRACE: [WS_MESSAGE] {"messageId":3,"type":"currentStatusResult","params":{"status":{"app_status":"idle"}}}
+ 
+Jan 10 17:20:24 detox[8934] INFO:  [APP_STATUS] The app seems to be idle
+Jan 10 17:20:34 detox[8934] TRACE: [WS_SEND] {"type":"currentStatus","params":{},"messageId":4}
+Jan 10 17:20:34 detox[8934] TRACE: [WSS_GET_FROM, #tester] {"type":"currentStatus","params":{},"messageId":4}
+Jan 10 17:20:34 detox[8934] TRACE: [WSS_SEND_TO, #app] {"type":"currentStatus","params":{},"messageId":4}
+Jan 10 17:20:34 detox[8934] TRACE: [WSS_GET_FROM, #app] {"messageId":4,"type":"currentStatusResult","params":{"status":{"app_status":"idle"}}}
+Jan 10 17:20:34 detox[8934] TRACE: [WSS_SEND_TO, #tester] {"messageId":4,"type":"currentStatusResult","params":{"status":{"app_status":"idle"}}}
+Jan 10 17:20:34 detox[8934] TRACE: [WS_MESSAGE] {"messageId":4,"type":"currentStatusResult","params":{"status":{"app_status":"idle"}}}
+ 
+Jan 10 17:20:34 detox[8934] INFO:  [APP_STATUS] The app seems to be idle
+Jan 10 17:20:38 detox[8934] TRACE: [WSS_GET_FROM, #app] {"messageId":1,"type":"invokeResult","params":{"result":null}}
+Jan 10 17:20:38 detox[8934] TRACE: [WSS_SEND_TO, #tester] {"messageId":1,"type":"invokeResult","params":{"result":null}}
+Jan 10 17:20:38 detox[8934] TRACE: [WS_MESSAGE] {"messageId":1,"type":"invokeResult","params":{"result":null}}
+ 
+Jan 10 17:20:38 detox[8934] TRACE: [WS_SEND] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Goodbye, World!!!"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]},"messageId":5}
+Jan 10 17:20:38 detox[8934] TRACE: [WSS_GET_FROM, #tester] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Goodbye, World!!!"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]},"messageId":5}
+Jan 10 17:20:38 detox[8934] TRACE: [WSS_SEND_TO, #app] {"type":"invoke","params":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Goodbye, World!!!"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]},"messageId":5}
+Jan 10 17:20:38 detox[8934] TRACE: [WSS_GET_FROM, #app] {"messageId":5,"type":"testFailed","params":{"details":"'(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)' doesn't match the selected view.\nExpected: (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)\n     Got: was null\n"}}
+Jan 10 17:20:38 detox[8934] TRACE: [WSS_SEND_TO, #tester] {"messageId":5,"type":"testFailed","params":{"details":"'(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)' doesn't match the selected view.\nExpected: (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)\n     Got: was null\n"}}
+Jan 10 17:20:38 detox[8934] TRACE: [WS_MESSAGE] {"messageId":5,"type":"testFailed","params":{"details":"'(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)' doesn't match the selected view.\nExpected: (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)\n     Got: was null\n"}}
+ 
+Jan 10 17:20:38 detox[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestFnFailure({
+  error: Test Failed: '(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)' doesn't match the selected view.
+  Expected: (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)
+       Got: was null
+  
+      at Object.<anonymous> (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/e2e/app-goodbye.e2e.ts:10:57)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+    name: 'DetoxRuntimeError'
+  }
+})
+Jan 10 17:20:38 detox[8934] TRACE: [ARTIFACT_START] starting ADBScreencapRecording
+Jan 10 17:20:38 detox[8934] DEBUG: [EXEC_CMD, #70] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "screencap /sdcard/17198155_15.png"
+Jan 10 17:20:38 detox[8934] TRACE: [EXEC_SUCCESS, #70] 
+Jan 10 17:20:38 detox[8934] TRACE: [ARTIFACT_STOP] stopping ADBScreencapRecording
+Jan 10 17:20:38 detox[8934] TRACE: [DETOX_AFTER_EACH] failed test: "Example (goodbye) should show goodbye screen after tap"
+Jan 10 17:20:38 detox[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onTestDone({
+  title: 'should show goodbye screen after tap',
+  parent: 'Example (goodbye)',
+  fullName: 'Example (goodbye) should show goodbye screen after tap',
+  functionCode: 'async () => {\n' +
+    "        await (0, detox_1.element)(detox_1.by.id('goodbye_button')).tap();\n" +
+    "        await (0, detox_1.expect)((0, detox_1.element)(detox_1.by.text('Goodbye, World!!!'))).toBeVisible();\n" +
+    '    }',
+  invocations: 1,
+  status: 'failed',
+  errors: [
+    [
+      [DetoxRuntimeError],
+      ErrorWithStack: 
+          at /Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/e2e/app-goodbye.e2e.ts:8:3
+          at _dispatchDescribe (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/node_modules/jest-circus/build/index.js:105:26)
+          at describe (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/node_modules/jest-circus/build/index.js:60:5)
+          at Object.<anonymous> (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/e2e/app-goodbye.e2e.ts:3:1)
+          at Runtime._execModule (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/node_modules/jest-runtime/build/index.js:1714:24)
+          at Runtime._loadModule (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/node_modules/jest-runtime/build/index.js:1223:12)
+          at Runtime.requireModule (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/node_modules/jest-runtime/build/index.js:1047:12)
+          at jestAdapter (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:89:13)
+          at processTicksAndRejections (internal/process/task_queues.js:97:5)
+          at runTestInternal (/Users/puneetbajaj/Desktop/browserstack/detox-session/detox-test-suite-jest/node_modules/jest-runner/build/runTest.js:411:16)
+    ]
+  ],
+  asyncError: undefined,
+  timedOut: false
+})
+Jan 10 17:20:38 detox[8934] TRACE: [ARTIFACT_STOP] stopping ADBLogcatRecording
+Jan 10 17:20:38 detox[8934] TRACE: [ARTIFACT_START] starting ADBScreencapRecording
+Jan 10 17:20:38 detox[8934] DEBUG: [EXEC_CMD, #71] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "screencap /sdcard/17198155_16.png"
+Jan 10 17:20:38 detox[8934] DEBUG: [EXEC_CMD, #72] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "date +\"%m-%d %T.000\""
+Jan 10 17:20:38 detox[8934] TRACE: [EXEC_SUCCESS, #72] 01-10 17:20:38.000
+
+Jan 10 17:20:38 detox[9040] TRACE: [SPAWN_KILL] sending SIGINT to: /Users/puneetbajaj/Library/Android/sdk/platform-tools/adb -s RFCR90M7DPD shell logcat -T "01-10 17:20:02.000" --pid=13721 -f /sdcard/17198155_14.log
+Jan 10 17:20:38 detox[8934] DEBUG: [SPAWN_END, #68, cpid=9040] /Users/puneetbajaj/Library/Android/sdk/platform-tools/adb -s RFCR90M7DPD shell "logcat -T \"01-10 17:20:02.000\" --pid=13721 -f /sdcard/17198155_14.log" terminated with SIGINT
+Jan 10 17:20:38 detox[8934] TRACE: [ARTIFACT_SAVE] saving ADBLogcatRecording to: artifacts-path/✗ Example (goodbye) should show goodbye screen after tap/device.log
+Jan 10 17:20:38 detox[8934] DEBUG: [EXEC_CMD, #73] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD pull "/sdcard/17198155_14.log" "artifacts-path/✗ Example (goodbye) should show goodbye screen after tap/device.log"
+Jan 10 17:20:38 detox[8934] TRACE: [EXEC_SUCCESS, #73] /sdcard/17198155_14.log: 1 file pulled, 0 skipped. 8.2 MB/s (36864 bytes in 0.004s)
+
+Jan 10 17:20:38 detox[8934] DEBUG: [EXEC_CMD, #74] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "rm  \"/sdcard/17198155_14.log\""
+Jan 10 17:20:39 detox[8934] TRACE: [EXEC_SUCCESS, #74] 
+Jan 10 17:20:39 detox[8934] TRACE: [ARTIFACT_SAVE] saving ADBLogcatRecording to: artifacts-path/RFCR90M7DPD 2023-01-10 11-50-39Z.startup.log
+Jan 10 17:20:39 detox[8934] DEBUG: [EXEC_CMD, #75] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD pull "/sdcard/17198155_12.log" "artifacts-path/RFCR90M7DPD 2023-01-10 11-50-39Z.startup.log"
+Jan 10 17:20:39 detox[8934] TRACE: [EXEC_SUCCESS, #75] /sdcard/17198155_12.log: 1 file pulled, 0 skipped. 5.8 MB/s (40960 bytes in 0.007s)
+
+Jan 10 17:20:39 detox[8934] DEBUG: [EXEC_CMD, #76] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "rm  \"/sdcard/17198155_12.log\""
+Jan 10 17:20:39 detox[8934] TRACE: [EXEC_SUCCESS, #76] 
+Jan 10 17:20:39 detox[8934] TRACE: [EXEC_SUCCESS, #71] 
+Jan 10 17:20:39 detox[8934] TRACE: [ARTIFACT_STOP] stopping ADBScreencapRecording
+Jan 10 17:20:39 detox[8934] INFO:  [1m[37mExample (goodbye): [39m[22m[90mshould show goodbye screen after tap[39m[90m [[31mFAIL[90m][39m
+Jan 10 17:20:39 Example (goodbye)[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onRunDescribeFinish({ name: 'Example (goodbye)' })
+Jan 10 17:20:39 ROOT_DESCRIBE_BLOCK[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onRunDescribeFinish({ name: 'ROOT_DESCRIBE_BLOCK' })
+Jan 10 17:20:39 detox[8934] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeCleanup()
+Jan 10 17:20:39 detox[8934] TRACE: [ARTIFACT_SAVE] saving ADBScreencapRecording to: artifacts-path/✗ Example (goodbye) should show goodbye screen after tap/testStart.png
+Jan 10 17:20:39 detox[8934] DEBUG: [EXEC_CMD, #77] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD pull "/sdcard/17198155_13.png" "artifacts-path/✗ Example (goodbye) should show goodbye screen after tap/testStart.png"
+Jan 10 17:20:39 detox[8934] TRACE: [EXEC_SUCCESS, #77] /sdcard/17198155_13.png: 1 file pulled, 0 skipped. 11.1 MB/s (54457 bytes in 0.005s)
+
+Jan 10 17:20:39 detox[8934] DEBUG: [EXEC_CMD, #78] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "rm  \"/sdcard/17198155_13.png\""
+Jan 10 17:20:39 detox[8934] TRACE: [EXEC_SUCCESS, #78] 
+Jan 10 17:20:39 detox[8934] TRACE: [ARTIFACT_SAVE] saving ADBScreencapRecording to: artifacts-path/✗ Example (goodbye) should show goodbye screen after tap/testFnFailure.png
+Jan 10 17:20:39 detox[8934] DEBUG: [EXEC_CMD, #79] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD pull "/sdcard/17198155_15.png" "artifacts-path/✗ Example (goodbye) should show goodbye screen after tap/testFnFailure.png"
+Jan 10 17:20:39 detox[8934] TRACE: [EXEC_SUCCESS, #79] /sdcard/17198155_15.png: 1 file pulled, 0 skipped. 13.4 MB/s (52711 bytes in 0.004s)
+
+Jan 10 17:20:39 detox[8934] DEBUG: [EXEC_CMD, #80] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "rm  \"/sdcard/17198155_15.png\""
+Jan 10 17:20:39 detox[8934] TRACE: [EXEC_SUCCESS, #80] 
+Jan 10 17:20:39 detox[8934] TRACE: [ARTIFACT_SAVE] saving ADBScreencapRecording to: artifacts-path/✗ Example (goodbye) should show goodbye screen after tap/testDone.png
+Jan 10 17:20:39 detox[8934] DEBUG: [EXEC_CMD, #81] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD pull "/sdcard/17198155_16.png" "artifacts-path/✗ Example (goodbye) should show goodbye screen after tap/testDone.png"
+Jan 10 17:20:39 detox[8934] TRACE: [EXEC_SUCCESS, #81] /sdcard/17198155_16.png: 1 file pulled, 0 skipped. 10.7 MB/s (52711 bytes in 0.005s)
+
+Jan 10 17:20:39 detox[8934] DEBUG: [EXEC_CMD, #82] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD shell "rm  \"/sdcard/17198155_16.png\""
+Jan 10 17:20:39 detox[8934] TRACE: [EXEC_SUCCESS, #82] 
+Jan 10 17:20:39 detox[8934] TRACE: [ARTIFACT_START] starting FileArtifact
+Jan 10 17:20:39 detox[8934] TRACE: [ARTIFACT_STOP] stopping FileArtifact
+Jan 10 17:20:39 detox[8934] TRACE: [ARTIFACT_SAVE] saving FileArtifact to: artifacts-path/detox_pid_8934.json.log { append: true }
+Jan 10 17:20:39 detox[8934] TRACE: [ARTIFACT_START] starting FileArtifact
+Jan 10 17:20:39 detox[8934] TRACE: [ARTIFACT_STOP] stopping FileArtifact
+Jan 10 17:20:39 detox[8934] TRACE: [ARTIFACT_SAVE] saving FileArtifact to: artifacts-path/detox_pid_8934.log { append: true }
+Jan 10 17:20:39 detox[8934] DEBUG: [MOVE_FILE] moving "/private/var/folders/t9/mxs3t0d941j6w_1dm67555qm0000gp/T/eb45708d-a13b-4954-8ef5-d92e5696e632.detox.log" to artifacts-path/detox_pid_8934.json.log via appending
+Jan 10 17:20:39 detox[8934] DEBUG: [MOVE_FILE] moving "/private/var/folders/t9/mxs3t0d941j6w_1dm67555qm0000gp/T/7c45a5c0-bc7f-41f1-bd55-972a67aacce6.detox.log" to artifacts-path/detox_pid_8934.log via appending
+Jan 10 17:20:39 detox[8934] TRACE: [WS_SEND] {"type":"cleanup","params":{"stopRunner":false},"messageId":-49642}
+Jan 10 17:20:39 detox[8934] TRACE: [WSS_GET_FROM, #tester] {"type":"cleanup","params":{"stopRunner":false},"messageId":-49642}
+Jan 10 17:20:39 detox[8934] TRACE: [WSS_SEND_TO, #app] {"type":"cleanup","params":{"stopRunner":false},"messageId":-49642}
+Jan 10 17:20:39 detox[8934] TRACE: [WSS_GET_FROM, #app] {"messageId":-49642,"type":"cleanupDone","params":{}}
+Jan 10 17:20:39 detox[8934] TRACE: [WSS_SEND_TO, #tester] {"messageId":-49642,"type":"cleanupDone","params":{}}
+Jan 10 17:20:39 detox[8934] TRACE: [WS_MESSAGE] {"messageId":-49642,"type":"cleanupDone","params":{}}
+ 
+Jan 10 17:20:39 detox[8934] TRACE: [SESSION_TORN] tester exited session 800d220d-28aa-415d-23ec-317adbe77cab
+Jan 10 17:20:39 detox[8934] TRACE: [WSS_SEND_TO, #app] {"type":"testerDisconnected","messageId":-1}
+Jan 10 17:20:39 detox[9024] TRACE: [SPAWN_KILL] sending SIGINT to: /Users/puneetbajaj/Library/Android/sdk/platform-tools/adb -s RFCR90M7DPD shell am instrument -w -r -e detoxServer ws://localhost:50115 -e detoxSessionId 800d220d-28aa-415d-23ec-317adbe77cab -e debug false com.detox.rn.example.test/com.example.DetoxTestAppJUnitRunner
+Jan 10 17:20:39 detox[8934] DEBUG: [SPAWN_END, #62, cpid=9024] /Users/puneetbajaj/Library/Android/sdk/platform-tools/adb -s RFCR90M7DPD shell am instrument -w -r -e detoxServer ws://localhost:50115 -e detoxSessionId 800d220d-28aa-415d-23ec-317adbe77cab -e debug false com.detox.rn.example.test/com.example.DetoxTestAppJUnitRunner terminated with SIGINT
+Jan 10 17:20:39 detox[8934] DEBUG: [EXEC_CMD, #83] "/Users/puneetbajaj/Library/Android/sdk/platform-tools/adb" -s RFCR90M7DPD reverse --remove tcp:50115
+Jan 10 17:20:39 detox[8934] DEBUG: [WSS_CLOSE] Detox server has been closed gracefully
+Jan 10 17:20:39 detox[8934] TRACE: [SESSION_TORN] app exited session 800d220d-28aa-415d-23ec-317adbe77cab
+Jan 10 17:20:39 detox[8934] TRACE: [EXEC_SUCCESS, #83] 

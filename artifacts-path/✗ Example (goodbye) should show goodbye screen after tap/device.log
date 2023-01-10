@@ -1,0 +1,273 @@
+--------- beginning of main
+01-10 17:20:02.004 13721 13802 D TrafficStats: tagSocket(129) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:02.008 13721 13801 D TrafficStats: tagSocket(129) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:02.110 13721 13811 W unknown:ReactContext: initializeMessageQueueThreads() is called.
+01-10 17:20:02.130 13721 13721 W unknown:ReactNative: Packager connection already open, nooping.
+01-10 17:20:02.144 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.drawer.ReactDrawerLayoutManager
+01-10 17:20:02.147 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.uimanager.LayoutShadowNode
+01-10 17:20:02.149 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollViewManager
+01-10 17:20:02.151 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollContainerViewManager
+01-10 17:20:02.152 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ReactProgressBarViewManager
+01-10 17:20:02.152 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ProgressBarShadowNode
+01-10 17:20:02.153 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactScrollViewManager
+01-10 17:20:02.155 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.slider.ReactSliderManager
+01-10 17:20:02.156 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.slider.ReactSliderManager$ReactSliderShadowNode
+01-10 17:20:02.157 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager
+01-10 17:20:02.158 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager$ReactSwitchShadowNode
+01-10 17:20:02.158 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.swiperefresh.SwipeRefreshLayoutManager
+01-10 17:20:02.159 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageViewManager
+01-10 17:20:02.160 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageShadowNode
+01-10 17:20:02.161 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.image.ReactImageManager
+01-10 17:20:02.162 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ReactModalHostManager
+01-10 17:20:02.163 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ModalHostShadowNode
+01-10 17:20:02.163 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextManager
+01-10 17:20:02.164 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextShadowNode
+01-10 17:20:02.164 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputManager
+01-10 17:20:02.166 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputShadowNode
+01-10 17:20:02.168 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextViewManager
+01-10 17:20:02.169 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextShadowNode
+01-10 17:20:02.170 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.view.ReactViewManager
+01-10 17:20:02.171 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextViewManager
+01-10 17:20:02.172 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextShadowNode
+01-10 17:20:02.172 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.unimplementedview.ReactUnimplementedViewManager
+01-10 17:20:02.174 13721 13814 W unknown:ReactContext: initializeMessageQueueThreads() is called.
+01-10 17:20:02.175 13721 13814 D SoLoader: libyoga.so not found on /data/data/com.detox.rn.example/lib-main
+01-10 17:20:02.175 13721 13814 D SoLoader: libyoga.so found on /data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/lib/arm64
+01-10 17:20:02.175 13721 13814 D SoLoader: Not resolving dependencies for libyoga.so
+01-10 17:20:02.179 13721 13721 D DetoxRNLoading: Listener-proxy method called: onReactContextInitialized
+01-10 17:20:02.179 13721 13721 I DetoxRNLoading: Got new RN-context async'ly through listener
+01-10 17:20:02.180 13721 13721 D DetoxRNLoading: Listener-proxy method called: equals
+01-10 17:20:02.184 13721 13838 I DetoxRNIdleRes: Setting up Espresso Idling Resources for React Native
+01-10 17:20:02.190 13721 13838 D AsyncStorageIR: Checking whether a custom IR for Async-Storage is required... (legacy=false)
+01-10 17:20:02.190 13721 13838 D AsyncStorageIR: IR for Async-Storage is required! (legacy=false)
+01-10 17:20:02.190 13721 13838 D AsyncStorageIR: Checking whether a custom IR for Async-Storage is required... (legacy=true)
+01-10 17:20:02.191 13721 13814 W etox.rn.example: Accessing hidden method Landroid/os/MessageQueue;->next()Landroid/os/Message; (unsupported, reflection, allowed)
+01-10 17:20:02.191 13721 13814 W etox.rn.example: Accessing hidden field Landroid/os/MessageQueue;->mMessages:Landroid/os/Message; (unsupported, reflection, allowed)
+01-10 17:20:02.191 13721 13838 D AsyncStorageIR: IR for Async-Storage is required! (legacy=true)
+01-10 17:20:02.191 13721 13814 W etox.rn.example: Accessing hidden method Landroid/os/Message;->recycleUnchecked()V (unsupported, reflection, allowed)
+01-10 17:20:02.193 13721 13721 D AsyncStorageIR: Async-storage is busy!
+01-10 17:20:02.193 13721 13721 D AsyncStorageIRLegacy: Async-storage is busy!
+01-10 17:20:02.194 13721 13838 I DetoxDispatcher: Done with action '_init'
+01-10 17:20:02.194 13721 13838 I DetoxDispatcher: Handling action 'isReady' (ID #-1000)...
+01-10 17:20:02.332 13721 13813 I ReactNativeJS: Running "example
+01-10 17:20:02.430 13721 13721 D CompatibilityChangeReporter: Compat change id reported: 210923482; UID 10306; state: DISABLED
+01-10 17:20:02.430 13721 13721 D CompatibilityChangeReporter: Compat change id reported: 37756858; UID 10306; state: ENABLED
+01-10 17:20:02.466 13721 13721 I Detox   : Wait is over: App is now idle!
+01-10 17:20:02.466 13721 13838 I DetoxWSClient: Sending out action 'ready' (ID #-1000)
+01-10 17:20:02.467 13721 13838 I DetoxDispatcher: Done with action 'isReady'
+01-10 17:20:02.467 13721 13838 I DetoxDispatcher: Handling action 'loginSuccess' (ID #0)...
+01-10 17:20:02.467 13721 13838 I DetoxDispatcher: Done with action 'loginSuccess'
+01-10 17:20:02.467 13721 13838 I DetoxDispatcher: Handling action 'isReady' (ID #-1000)...
+01-10 17:20:02.470 13721 13721 I Detox   : Wait is over: App is now idle!
+01-10 17:20:02.471 13721 13838 I DetoxWSClient: Sending out action 'ready' (ID #-1000)
+01-10 17:20:02.471 13721 13838 I DetoxDispatcher: Done with action 'isReady'
+01-10 17:20:02.917 13721 13842 D DetoxWSClient: Received action 'reactNativeReload' (ID #-1000, params={})
+01-10 17:20:02.918 13721 13838 I DetoxDispatcher: Handling action 'reactNativeReload' (ID #-1000)...
+01-10 17:20:02.921 13721 13838 I DetoxRNExt: Reloading React Native
+01-10 17:20:02.924 13721 13799 D TrafficStats: tagSocket(129) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:02.927 13721 13799 W unknown:ReactNative: The packager does not seem to be running as we got an IOException requesting its status: Failed to connect to localhost/127.0.0.1:8081
+01-10 17:20:02.928 13721 13721 W unknown:ReactNative: Packager connection already open, nooping.
+01-10 17:20:02.929 13721 13814 W unknown:ReactContextBaseJavaModule: Catalyst Instance has already disappeared: requested by DeviceInfo
+01-10 17:20:02.929 13721 13814 W unknown:ReactContextBaseJavaModule: Catalyst Instance has already disappeared: requested by NativeAnimatedModule
+01-10 17:20:02.929 13721 13814 W unknown:ReactContextBaseJavaModule: Catalyst Instance has already disappeared: requested by FrescoModule
+01-10 17:20:02.932 13721 13930 V AsyncStorageExpoMigration: No scoped database found
+01-10 17:20:04.010 13721 13802 D TrafficStats: tagSocket(106) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:04.014 13721 13801 D TrafficStats: tagSocket(106) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:04.075 13721 13721 I ViewRootImpl@4b3dbb[MainActivity]: MSG_WINDOW_TOUCH_MODE_CHANGED 
+01-10 17:20:04.126 13721 13930 W unknown:ReactContext: initializeMessageQueueThreads() is called.
+01-10 17:20:04.132 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.drawer.ReactDrawerLayoutManager
+01-10 17:20:04.135 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.uimanager.LayoutShadowNode
+01-10 17:20:04.136 13721 13721 W unknown:ReactNative: Packager connection already open, nooping.
+01-10 17:20:04.136 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollViewManager
+01-10 17:20:04.138 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollContainerViewManager
+01-10 17:20:04.138 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ReactProgressBarViewManager
+01-10 17:20:04.139 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ProgressBarShadowNode
+01-10 17:20:04.139 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactScrollViewManager
+01-10 17:20:04.141 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.slider.ReactSliderManager
+01-10 17:20:04.142 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.slider.ReactSliderManager$ReactSliderShadowNode
+01-10 17:20:04.142 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager
+01-10 17:20:04.143 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager$ReactSwitchShadowNode
+01-10 17:20:04.144 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.swiperefresh.SwipeRefreshLayoutManager
+01-10 17:20:04.144 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageViewManager
+01-10 17:20:04.145 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageShadowNode
+01-10 17:20:04.146 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.image.ReactImageManager
+01-10 17:20:04.148 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ReactModalHostManager
+01-10 17:20:04.149 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ModalHostShadowNode
+01-10 17:20:04.149 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextManager
+01-10 17:20:04.149 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextShadowNode
+01-10 17:20:04.150 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputManager
+01-10 17:20:04.151 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputShadowNode
+01-10 17:20:04.153 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextViewManager
+01-10 17:20:04.153 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextShadowNode
+01-10 17:20:04.154 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.view.ReactViewManager
+01-10 17:20:04.155 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextViewManager
+01-10 17:20:04.156 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextShadowNode
+01-10 17:20:04.156 13721 13933 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.unimplementedview.ReactUnimplementedViewManager
+01-10 17:20:04.157 13721 13933 W unknown:ReactContext: initializeMessageQueueThreads() is called.
+01-10 17:20:04.172 13721 13721 D DetoxRNLoading: Listener-proxy method called: onReactContextInitialized
+01-10 17:20:04.172 13721 13721 I DetoxRNLoading: Got new RN-context async'ly through listener
+01-10 17:20:04.172 13721 13721 D DetoxRNLoading: Listener-proxy method called: equals
+01-10 17:20:04.173 13721 13838 I DetoxRNIdleRes: Setting up Espresso Idling Resources for React Native
+01-10 17:20:04.187 13721 13721 D SensorManager: unregisterListener
+01-10 17:20:04.218 13721 13721 D LifecycleMonitor: Lifecycle status change: com.example.MainActivity@752d5d3 in: PAUSED
+01-10 17:20:04.222 13721 13721 I ViewRootImpl@4b3dbb[MainActivity]: MSG_WINDOW_FOCUS_CHANGED 0 1
+01-10 17:20:04.225 13721 13838 D AsyncStorageIR: Checking whether a custom IR for Async-Storage is required... (legacy=false)
+01-10 17:20:04.225 13721 13838 D AsyncStorageIR: IR for Async-Storage is required! (legacy=false)
+01-10 17:20:04.225 13721 13838 D AsyncStorageIR: Checking whether a custom IR for Async-Storage is required... (legacy=true)
+01-10 17:20:04.225 13721 13838 D AsyncStorageIR: IR for Async-Storage is required! (legacy=true)
+01-10 17:20:04.255 13721 13721 D AsyncStorageIR: Async-storage is busy!
+01-10 17:20:04.255 13721 13721 D AsyncStorageIRLegacy: Async-storage is busy!
+01-10 17:20:04.257 13721 13838 I DetoxWSClient: Sending out action 'ready' (ID #-1000)
+01-10 17:20:04.258 13721 13838 I DetoxDispatcher: Done with action 'reactNativeReload'
+01-10 17:20:04.268 13721 13842 D DetoxWSClient: Received action 'invoke' (ID #1, params={"target":{"type":"Class","value":"com.wix.detox.espresso.EspressoDetox"},"method":"perform","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForTestId","args":["goodbye_button"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxViewActions"},"method":"click","args":[]}}]})
+01-10 17:20:04.269 13721 13838 I DetoxDispatcher: Handling action 'invoke' (ID #1)...
+01-10 17:20:04.276 13721 13838 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForTestId, [goodbye_button]
+01-10 17:20:04.285 13721 13721 D InputTransport: Input channel destroyed: 'ClientS', fd=118
+01-10 17:20:04.297 13721 13838 D Detox   : class androidx.test.espresso.Espresso, onView, [(view.getTag() is "goodbye_button" and view has effective visibility <VISIBLE>)]
+01-10 17:20:04.301 13721 13838 D Detox   : class com.wix.detox.espresso.DetoxViewActions, click, []
+01-10 17:20:04.302 13721 13838 W etox.rn.example: Accessing hidden method Landroid/view/ViewConfiguration;->getDoubleTapMinTime()I (unsupported, reflection, allowed)
+01-10 17:20:04.306 13721 13838 D Detox   : class com.wix.detox.espresso.EspressoDetox, perform, [androidx.test.espresso.ViewInteraction@67a6d82, com.wix.detox.espresso.action.RNClickAction@40a6c93]
+01-10 17:20:04.424 13721 13931 I ReactNativeJS: Running "example
+01-10 17:20:04.452 13721 13721 I ViewRootImpl@4b3dbb[MainActivity]: handleAppVisibility mAppVisible = true visible = false
+01-10 17:20:04.465 13721 13768 D OpenGLRenderer: setSurface called with nullptr
+01-10 17:20:04.465 13721 13768 D OpenGLRenderer: setSurface() destroyed EGLSurface
+01-10 17:20:04.465 13721 13768 D OpenGLRenderer: destroyEglSurface
+01-10 17:20:04.469 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: performTraversals mFirst=false windowShouldResize=false viewVisibilityChanged=true mForceNextWindowRelayout=false params=null
+01-10 17:20:04.480 13721 13721 I ViewRootImpl@4b3dbb[MainActivity]: Relayout returned: old=(0,0,1080,2400) new=(0,0,1080,2400) req=(1080,2400)8 dur=9 res=0x2 s={false 0x0} ch=true seqId=0
+01-10 17:20:04.481 13721 13721 I ViewRootImpl@4b3dbb[MainActivity]: stopped(true) old = false
+01-10 17:20:04.481 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: WindowStopped on com.detox.rn.example/com.example.MainActivity set to true
+01-10 17:20:04.483 13721 13721 D LifecycleMonitor: Lifecycle status change: com.example.MainActivity@752d5d3 in: STOPPED
+01-10 17:20:04.485 13721 13721 I MSHandlerLifeCycle: removeMultiSplitHandler: no exist. decor=DecorView@31abe90[MainActivity]
+01-10 17:20:04.602 13721 13721 W RootViewPicker: No activity currently resumed - waiting: 10ms for one to appear.
+01-10 17:20:04.614 13721 13721 W RootViewPicker: No activity currently resumed - waiting: 50ms for one to appear.
+01-10 17:20:04.672 13721 13721 W RootViewPicker: No activity currently resumed - waiting: 100ms for one to appear.
+01-10 17:20:04.779 13721 13721 W RootViewPicker: No activity currently resumed - waiting: 500ms for one to appear.
+01-10 17:20:05.287 13721 13721 W RootViewPicker: No activity currently resumed - waiting: 2000ms for one to appear.
+01-10 17:20:06.029 13721 13801 D TrafficStats: tagSocket(106) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:07.295 13721 13721 W RootViewPicker: No activity currently resumed - waiting: 30000ms for one to appear.
+01-10 17:20:08.044 13721 13801 D TrafficStats: tagSocket(106) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:10.068 13721 13801 D TrafficStats: tagSocket(106) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:12.096 13721 13801 D TrafficStats: tagSocket(106) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:14.125 13721 13801 D TrafficStats: tagSocket(106) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:14.271 13721 13842 D DetoxWSClient: Received action 'currentStatus' (ID #2, params={})
+01-10 17:20:14.272 13721 13839 I DetoxDispatcher: Handling action 'currentStatus' (ID #2)...
+01-10 17:20:14.283 13721 13839 I DetoxWSClient: Sending out action 'currentStatusResult' (ID #2)
+01-10 17:20:14.284 13721 13839 I DetoxDispatcher: Done with action 'currentStatus'
+01-10 17:20:16.153 13721 13801 D TrafficStats: tagSocket(106) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:18.181 13721 13801 D TrafficStats: tagSocket(106) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:20.209 13721 13801 D TrafficStats: tagSocket(106) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:22.240 13721 13801 D TrafficStats: tagSocket(106) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:24.272 13721 13801 D TrafficStats: tagSocket(106) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:24.304 13721 13842 D DetoxWSClient: Received action 'currentStatus' (ID #3, params={})
+01-10 17:20:24.305 13721 13839 I DetoxDispatcher: Handling action 'currentStatus' (ID #3)...
+01-10 17:20:24.312 13721 13839 I DetoxWSClient: Sending out action 'currentStatusResult' (ID #3)
+01-10 17:20:24.313 13721 13839 I DetoxDispatcher: Done with action 'currentStatus'
+01-10 17:20:25.289 13721 13721 I ViewRootImpl@4b3dbb[MainActivity]: handleAppVisibility mAppVisible = false visible = true
+01-10 17:20:25.296 13721 13721 I ViewRootImpl@4b3dbb[MainActivity]: stopped(false) old = true
+01-10 17:20:25.296 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: WindowStopped on com.detox.rn.example/com.example.MainActivity set to false
+01-10 17:20:25.297 13721 13721 D LifecycleMonitor: Lifecycle status change: com.example.MainActivity@752d5d3 in: RESTARTED
+01-10 17:20:25.299 13721 13721 D LifecycleMonitor: Lifecycle status change: com.example.MainActivity@752d5d3 in: STARTED
+01-10 17:20:25.311 13721 13721 I MSHandlerLifeCycle: removeMultiSplitHandler: no exist. decor=DecorView@31abe90[MainActivity]
+01-10 17:20:25.311 13721 13721 I ViewRootImpl@4b3dbb[MainActivity]: stopped(false) old = false
+01-10 17:20:25.320 13721 13721 D SensorManager: registerListener :: 11, lsm6dsm Accelerometer Non-wakeup, 66667, 0, 
+01-10 17:20:25.328 13721 13721 D LifecycleMonitor: Lifecycle status change: com.example.MainActivity@752d5d3 in: RESUMED
+01-10 17:20:25.329 13721 13721 I DecorView: notifyKeepScreenOnChanged: keepScreenOn=false
+01-10 17:20:25.330 13721 13721 I MSHandlerLifeCycle: removeMultiSplitHandler: no exist. decor=DecorView@31abe90[MainActivity]
+01-10 17:20:25.333 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: performTraversals params={(0,0)(fillxfill) sim={adjust=pan forwardNavigation} ty=BASE_APPLICATION wanim=0x1030309
+01-10 17:20:25.333 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]:   fl=81810100
+01-10 17:20:25.333 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]:   pfl=12020040
+01-10 17:20:25.333 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]:   bhv=DEFAULT
+01-10 17:20:25.333 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]:   fitSides= naviIconColor=0}
+01-10 17:20:25.333 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: performTraversals mFirst=false windowShouldResize=false viewVisibilityChanged=true mForceNextWindowRelayout=false params={(0,0)(fillxfill) sim={adjust=pan forwardNavigation} ty=BASE_APPLICATION wanim=0x1030309
+01-10 17:20:25.333 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]:   fl=81810100
+01-10 17:20:25.333 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]:   pfl=12020040
+01-10 17:20:25.333 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]:   bhv=DEFAULT
+01-10 17:20:25.333 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]:   fitSides= naviIconColor=0}
+01-10 17:20:25.336 13721 13991 D TrafficStats: tagSocket(106) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:25.342 13721 13991 W unknown:ReconnectingWebSocket: Couldn't connect to "ws://localhost:8081/message?device=SM-M526B%20-%2013%20-%20API%2033&app=com.detox.rn.example&clientid=BridgeDevSupportManager", will silently retry
+01-10 17:20:25.345 13721 13721 D BLASTBufferQueue: new BLASTBufferQueue, mNativeObject= 0xb400007b814a6330 name= ViewRootImpl@4b3dbb[MainActivity] sc.mNativeObject= 0xb400007b114c4330 caller= android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:2789 android.view.ViewRootImpl.relayoutWindow:9635 android.view.ViewRootImpl.performTraversals:3759 android.view.ViewRootImpl.doTraversal:2991 android.view.ViewRootImpl$TraversalRunnable.run:10665 android.view.Choreographer$CallbackRecord.run:1301 android.view.Choreographer$CallbackRecord.run:1309 android.view.Choreographer.doCallbacks:923 android.view.Choreographer.doFrame:852 android.view.Choreographer$FrameDisplayEventReceiver.run:1283 
+01-10 17:20:25.345 13721 13721 D BLASTBufferQueue: update, w= 1080 h= 2400 mNativeObject= 0xb400007b814a6330 sc.mNativeObject= 0xb400007b114c4330 format= -1 caller= android.graphics.BLASTBufferQueue.<init>:76 android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:2789 android.view.ViewRootImpl.relayoutWindow:9635 android.view.ViewRootImpl.performTraversals:3759 android.view.ViewRootImpl.doTraversal:2991 android.view.ViewRootImpl$TraversalRunnable.run:10665 
+01-10 17:20:25.345 13721 13721 I ViewRootImpl@4b3dbb[MainActivity]: Relayout returned: old=(0,0,1080,2400) new=(0,0,1080,2400) req=(1080,2400)0 dur=11 res=0x3 s={true 0xb400007c114a8090} ch=true seqId=0
+01-10 17:20:25.346 13721 13768 D OpenGLRenderer: eglCreateWindowSurface
+01-10 17:20:25.346 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: mThreadedRenderer.initialize() mSurface={isValid=true 0xb400007c114a8090} hwInitialized=true
+01-10 17:20:25.349 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: reportNextDraw android.view.ViewRootImpl.performTraversals:4313 android.view.ViewRootImpl.doTraversal:2991 android.view.ViewRootImpl$TraversalRunnable.run:10665 android.view.Choreographer$CallbackRecord.run:1301 android.view.Choreographer$CallbackRecord.run:1309 
+01-10 17:20:25.350 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: Setup new sync id=1
+01-10 17:20:25.350 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: Setting syncFrameCallback
+01-10 17:20:25.350 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: registerCallbacksForSync syncBuffer=false
+01-10 17:20:25.352 13721 13818 D ViewRootImpl@4b3dbb[MainActivity]: Received frameDrawingCallback syncResult=0 frameNum=1.
+01-10 17:20:25.352 13721 13818 D ViewRootImpl@4b3dbb[MainActivity]: Setting up sync and frameCommitCallback
+01-10 17:20:25.353 13721 13768 D BLASTBufferQueue: [ViewRootImpl@4b3dbb[MainActivity]#1](f:0,a:0) onFrameAvailable the first frame is available
+01-10 17:20:25.353 13721 13768 D ViewRootImpl@4b3dbb[MainActivity]: Received frameCommittedCallback lastAttemptedDrawFrameNum=1 didProduceBuffer=true
+01-10 17:20:25.353 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: onSyncComplete
+01-10 17:20:25.354 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: setupSync seqId=0 mSyncId=1 fn=1 caller=android.view.ViewRootImpl$$ExternalSyntheticLambda11.accept:6 android.window.SurfaceSyncer.lambda$setupSync$1$android-window-SurfaceSyncer:128 android.window.SurfaceSyncer$$ExternalSyntheticLambda1.accept:8 android.window.SurfaceSyncer$SyncSet.checkIfSyncIsComplete:382 android.window.SurfaceSyncer$SyncSet.markSyncReady:359 android.window.SurfaceSyncer.markSyncReady:151 android.view.ViewRootImpl.performTraversals:4373 
+01-10 17:20:25.354 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: reportDrawFinished seqId=0 mSyncId=-1 fn=1 mSurfaceChangedTransaction=0xb400007b4149cb30
+01-10 17:20:25.377 13721 13721 I ViewRootImpl@4b3dbb[MainActivity]: MSG_WINDOW_FOCUS_CHANGED 1 1
+01-10 17:20:25.378 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: mThreadedRenderer.initializeIfNeeded()#2 mSurface={isValid=true 0xb400007c114a8090}
+01-10 17:20:25.379 13721 13721 D InputMethodManager: startInputInner - Id : 0
+01-10 17:20:25.379 13721 13721 I InputMethodManager: startInputInner - mService.startInputOrWindowGainedFocus
+01-10 17:20:26.161 13721 13721 W UiControllerImpl: Waiting for: DELAY_HAS_PAST for 100 iterations.
+01-10 17:20:26.293 13721 13801 D TrafficStats: tagSocket(114) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:27.349 13721 13991 D TrafficStats: tagSocket(114) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:27.797 13721 13721 W UiControllerImpl: Waiting for: DELAY_HAS_PAST for 200 iterations.
+01-10 17:20:28.307 13721 13801 D TrafficStats: tagSocket(114) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:29.357 13721 13991 D TrafficStats: tagSocket(114) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:29.432 13721 13721 W UiControllerImpl: Waiting for: DELAY_HAS_PAST for 300 iterations.
+01-10 17:20:30.319 13721 13801 D TrafficStats: tagSocket(114) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:31.051 13721 13721 W UiControllerImpl: Waiting for: DELAY_HAS_PAST for 400 iterations.
+01-10 17:20:31.364 13721 13991 D TrafficStats: tagSocket(114) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:32.330 13721 13801 D TrafficStats: tagSocket(114) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:32.687 13721 13721 W UiControllerImpl: Waiting for: DELAY_HAS_PAST for 500 iterations.
+01-10 17:20:33.375 13721 13991 D TrafficStats: tagSocket(114) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:34.327 13721 13842 D DetoxWSClient: Received action 'currentStatus' (ID #4, params={})
+01-10 17:20:34.328 13721 13839 I DetoxDispatcher: Handling action 'currentStatus' (ID #4)...
+01-10 17:20:34.332 13721 13839 I DetoxWSClient: Sending out action 'currentStatusResult' (ID #4)
+01-10 17:20:34.333 13721 13839 I DetoxDispatcher: Done with action 'currentStatus'
+01-10 17:20:34.345 13721 13801 D TrafficStats: tagSocket(114) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:35.387 13721 13991 D TrafficStats: tagSocket(114) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:35.858 13721 13721 W UiControllerImpl: Waiting for: DELAY_HAS_PAST for 700 iterations.
+01-10 17:20:36.361 13721 13801 D TrafficStats: tagSocket(114) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:37.303 13721 13721 W etox.rn.example: Accessing hidden method Landroid/view/WindowManagerGlobal;->getInstance()Landroid/view/WindowManagerGlobal; (unsupported, reflection, allowed)
+01-10 17:20:37.303 13721 13721 W etox.rn.example: Accessing hidden field Landroid/view/WindowManagerGlobal;->mViews:Ljava/util/ArrayList; (unsupported, reflection, allowed)
+01-10 17:20:37.303 13721 13721 W etox.rn.example: Accessing hidden field Landroid/view/WindowManagerGlobal;->mParams:Ljava/util/ArrayList; (unsupported, reflection, allowed)
+01-10 17:20:37.309 13721 13721 I ViewInteraction: Performing 'com.wix.detox.espresso.action.detoxsingletap@163190 click' action on view (view.getTag() is "goodbye_button" and view has effective visibility <VISIBLE>)
+01-10 17:20:37.321 13721 13721 I ViewRootImpl@4b3dbb[MainActivity]: ViewPostIme pointer 0
+01-10 17:20:37.363 13721 13721 I Detox   : UIManagerModule is busy
+01-10 17:20:37.398 13721 13991 D TrafficStats: tagSocket(114) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:37.865 13721 13838 I DetoxWSClient: Sending out action 'invokeResult' (ID #1)
+01-10 17:20:37.865 13721 13838 I DetoxDispatcher: Done with action 'invoke'
+01-10 17:20:37.875 13721 13842 D DetoxWSClient: Received action 'invoke' (ID #5, params={"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxAssertion"},"method":"assertMatcher","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"androidx.test.espresso.Espresso"},"method":"onView","args":[{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForText","args":["Goodbye, World!!!"]}}]}},{"type":"Invocation","value":{"target":{"type":"Class","value":"com.wix.detox.espresso.DetoxMatcher"},"method":"matcherForSufficientlyVisible","args":[{"type":"Integer","value":75}]}}]})
+01-10 17:20:37.876 13721 13838 I DetoxDispatcher: Handling action 'invoke' (ID #5)...
+01-10 17:20:37.876 13721 13838 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForText, [Goodbye, World!!!]
+01-10 17:20:37.877 13721 13838 D Detox   : class androidx.test.espresso.Espresso, onView, [(an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Goodbye, World!!!" and view has effective visibility <VISIBLE>)]
+01-10 17:20:37.878 13721 13838 D Detox   : class com.wix.detox.espresso.DetoxMatcher, matcherForSufficientlyVisible, [75]
+01-10 17:20:37.879 13721 13838 D Detox   : class com.wix.detox.espresso.DetoxAssertion, assertMatcher, [androidx.test.espresso.ViewInteraction@a4d419a, (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)]
+01-10 17:20:37.894 13721 13721 I ViewInteraction: Checking 'MatchesViewAssertion(Detox){viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)}' assertion on view (an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Goodbye, World!!!" and view has effective visibility <VISIBLE>)
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: Test exception
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: java.lang.reflect.InvocationTargetException
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: 	at java.lang.reflect.Method.invoke(Native Method)
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: 	at org.apache.commons.lang3.reflect.MethodUtils.invokeStaticMethod(MethodUtils.java:443)
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: 	at org.apache.commons.lang3.reflect.MethodUtils.invokeStaticMethod(MethodUtils.java:405)
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: 	at com.wix.invoke.types.ClassTarget.execute(ClassTarget.java:23)
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: 	at com.wix.invoke.types.Target.invoke(Target.java:59)
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: 	at com.wix.invoke.MethodInvocation.invoke(MethodInvocation.java:35)
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: 	at com.wix.invoke.MethodInvocation.invoke(MethodInvocation.java:26)
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: 	at com.wix.invoke.MethodInvocation.invoke(MethodInvocation.java:20)
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: 	at com.wix.detox.adapters.server.InvokeActionHandler.handle(DetoxActionHandlers.kt:54)
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: 	at com.wix.detox.adapters.server.ActionsExecutor.executeAction$lambda-2$lambda-1(DetoxActionsDispatcher.kt:64)
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: 	at com.wix.detox.adapters.server.ActionsExecutor.$r8$lambda$nk3cF8ntnfFqbJOcVqd04vjb5nY(Unknown Source:0)
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: 	at com.wix.detox.adapters.server.ActionsExecutor$$ExternalSyntheticLambda1.run(Unknown Source:8)
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: 	at android.os.Handler.handleCallback(Handler.java:942)
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: 	at android.os.Looper.loopOnce(Looper.java:226)
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: 	at android.os.Looper.loop(Looper.java:313)
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: 	at com.wix.detox.adapters.server.ActionsExecutor._init_$lambda-0(DetoxActionsDispatcher.kt:50)
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: 	at com.wix.detox.adapters.server.ActionsExecutor.$r8$lambda$Hi5vyewqQiQqk57AkJy_cHqNGKY(Unknown Source:0)
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: 	at com.wix.detox.adapters.server.ActionsExecutor$$ExternalSyntheticLambda0.run(Unknown Source:4)
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: 	at java.lang.Thread.run(Thread.java:1012)
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: Caused by: androidx.test.espresso.base.DefaultFailureHandler$AssertionFailedWithCauseError: '(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)' doesn't match the selected view.
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: Expected: (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() covers at least <75> percent of the view's area)
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers:      Got: was null
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: 
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: 	at dalvik.system.VMStack.getThreadStackTrace(Native Method)
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: 	at java.lang.Thread.getStackTrace(Thread.java:1841)
+01-10 17:20:37.897 13721 13838 I DetoxActionHandlers: 	at androidx.test.espresso.base.DefaultFailureHandler.ge

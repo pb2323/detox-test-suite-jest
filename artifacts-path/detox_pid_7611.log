@@ -1,0 +1,259 @@
+Jan 10 16:55:16 detox[7611] TRACE: [DETOX_CREATE] created a Detox instance with config:
+{
+  appsConfig: {
+    default: {
+      type: 'android.apk',
+      binaryPath: '../app-debug.apk'
+    }
+  },
+  artifactsConfig: {
+    rootDir: 'artifacts-cli/',
+    plugins: {
+      log: {
+        enabled: true,
+        keepOnlyFailedTestsArtifacts: false
+      },
+      screenshot: {
+        enabled: true,
+        shouldTakeAutomaticSnapshots: true,
+        keepOnlyFailedTestsArtifacts: false,
+        takeWhen: {
+          testStart: true,
+          testDone: true,
+          appNotReady: true
+        }
+      },
+      video: {
+        enabled: false,
+        keepOnlyFailedTestsArtifacts: false
+      },
+      instruments: {
+        enabled: false,
+        keepOnlyFailedTestsArtifacts: false
+      },
+      timeline: {
+        enabled: false
+      },
+      uiHierarchy: {
+        enabled: false,
+        keepOnlyFailedTestsArtifacts: false
+      }
+    },
+    pathBuilder: ArtifactPathBuilder {
+      _rootDir: 'artifacts-path'
+    }
+  },
+  behaviorConfig: {
+    init: {
+      reinstallApp: false,
+      exposeGlobals: true
+    },
+    cleanup: {
+      shutdownDevice: false
+    },
+    launchApp: 'auto'
+  },
+  cliConfig: {
+    artifactsLocation: 'artifacts-cli/',
+    configPath: './detox.config.json',
+    loglevel: 'info',
+    reuse: true,
+    useCustomLogger: true
+  },
+  configurationName: 'android.real.debug',
+  deviceConfig: {
+    type: 'android.attached',
+    device: {
+      adbName: 'RFCR90M7DPD'
+    }
+  },
+  runnerConfig: {
+    testRunner: 'jest',
+    runnerConfig: 'e2e/config.json',
+    specs: 'e2e',
+    skipLegacyWorkersInjection: false
+  },
+  sessionConfig: {
+    autoStart: true,
+    sessionId: '9c066648-0979-5a3a-41bf-d03c6ca992dc',
+    debugSynchronization: 10000
+  }
+}
+Jan 10 16:55:16 detox[7611] DEBUG: [WSS_CREATE] Detox server listening on localhost:49712...
+Jan 10 16:55:16 detox[7611] DEBUG: [WSS_CONNECTION, #49713] registered a new connection.
+Jan 10 16:55:16 detox[7611] TRACE: [WS_OPEN] opened web socket to: ws://localhost:49712
+Jan 10 16:55:16 detox[7611] TRACE: [WS_SEND] {"type":"login","params":{"sessionId":"9c066648-0979-5a3a-41bf-d03c6ca992dc","role":"tester"},"messageId":0}
+Jan 10 16:55:16 detox[7611] TRACE: [WSS_GET_FROM, #49713] {"type":"login","params":{"sessionId":"9c066648-0979-5a3a-41bf-d03c6ca992dc","role":"tester"},"messageId":0}
+Jan 10 16:55:16 detox[7611] TRACE: [SESSION_CREATED] created session 9c066648-0979-5a3a-41bf-d03c6ca992dc
+Jan 10 16:55:16 detox[7611] TRACE: [WSS_SEND_TO, #tester] {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+Jan 10 16:55:16 detox[7611] TRACE: [SESSION_JOINED] tester joined session 9c066648-0979-5a3a-41bf-d03c6ca992dc
+Jan 10 16:55:16 detox[7611] TRACE: [WS_MESSAGE] {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+ 
+Jan 10 16:55:16 detox[7611] DEBUG: [EXEC_CMD, #0] "/usr/local/bin/adb"  devices
+Jan 10 16:55:16 detox[7611] DEBUG: [EXEC_SUCCESS, #0] List of devices attached
+RFCR90M7DPD	device
+
+
+Jan 10 16:55:16 detox[7611] DEBUG: [DEVICE_LOOKUP] Found a matching & free device RFCR90M7DPD
+Jan 10 16:55:16 detox[7611] DEBUG: [EXEC_CMD, #1] "/usr/local/bin/adb" -s RFCR90M7DPD shell "getprop ro.build.version.sdk"
+Jan 10 16:55:16 detox[7611] TRACE: [EXEC_SUCCESS, #1] 33
+
+Jan 10 16:55:16 detox[7611] DEBUG: [EXEC_CMD, #2] "/usr/local/bin/adb" -s RFCR90M7DPD shell "dumpsys power | grep \"^[ ]*m[UW].*=\""
+Jan 10 16:55:17 detox[7611] TRACE: [EXEC_SUCCESS, #2]   mWakefulness=Awake
+  mWakefulnessChanging=false
+  mWakeLockSummary=0x0
+  mWakeUpWhenPluggedOrUnpluggedConfig=true
+  mWakeUpWhenPluggedOrUnpluggedInTheaterModeConfig=false
+  mUserActivityTimeoutOverrideFromWindowManager=-1
+  mUserActivityTimeoutForDexOverrideFromWindowManager=-1
+  mUserInactiveOverrideFromWindowManager=false
+  mUserId=0
+  mWakeLockSummary=0x0
+
+Jan 10 16:55:17 detox[7611] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBootDevice({ deviceId: 'RFCR90M7DPD', type: 'device', coldBoot: false })
+Jan 10 16:55:17 detox[7611] ERROR: $ANDROID_SDK_ROOT is not defined, set the path to the SDK installation directory into $ANDROID_SDK_ROOT,
+Go to https://developer.android.com/studio/command-line/variables.html for more details
+Jan 10 16:55:18 detox[7611] INFO:  [97mExample (hello)[39m is assigned to [91mundefined[39m
+Jan 10 16:55:18 detox[7611] INFO:  [1m[37mExample (hello): [39m[22m[90mshould have welcome screen[39m
+Jan 10 16:55:18 detox[7611] INFO:  [1m[37mExample (hello): [39m[22m[90mshould have welcome screen[39m[90m [[31mFAIL[90m][39m
+Jan 10 16:55:18 detox[7611] INFO:  [1m[37mExample (hello): [39m[22m[90mshould show hello screen after tap[39m
+Jan 10 16:55:18 detox[7611] INFO:  [1m[37mExample (hello): [39m[22m[90mshould show hello screen after tap[39m[90m [[31mFAIL[90m][39m
+Jan 10 16:55:18 detox[7611] INFO:  [1m[37mExample (hello): [39m[22m[90mshould show world screen after tap[39m
+Jan 10 16:55:18 detox[7611] INFO:  [1m[37mExample (hello): [39m[22m[90mshould show world screen after tap[39m[90m [[31mFAIL[90m][39m
+Jan 10 16:55:18 detox[7611] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeCleanup()
+Jan 10 16:55:18 detox[7611] TRACE: [ARTIFACT_START] starting FileArtifact
+Jan 10 16:55:18 detox[7611] TRACE: [ARTIFACT_STOP] stopping FileArtifact
+Jan 10 16:55:18 detox[7611] TRACE: [ARTIFACT_SAVE] saving FileArtifact to: artifacts-path/detox_pid_7611.json.log { append: true }
+Jan 10 16:55:18 detox[7611] TRACE: [ARTIFACT_START] starting FileArtifact
+Jan 10 16:55:18 detox[7611] TRACE: [ARTIFACT_STOP] stopping FileArtifact
+Jan 10 16:55:18 detox[7611] TRACE: [ARTIFACT_SAVE] saving FileArtifact to: artifacts-path/detox_pid_7611.log { append: true }
+Jan 10 16:55:18 detox[7611] DEBUG: [MOVE_FILE] moving "/private/var/folders/t9/mxs3t0d941j6w_1dm67555qm0000gp/T/de51a12b-7f89-4b0e-a6fd-17f400a9ad27.detox.log" to artifacts-path/detox_pid_7611.log
+Jan 10 16:55:18 detox[7611] DEBUG: [MOVE_FILE] moving "/private/var/folders/t9/mxs3t0d941j6w_1dm67555qm0000gp/T/869c5788-28de-45b4-8261-d25753be429f.detox.log" to artifacts-path/detox_pid_7611.json.log
+Jan 10 16:55:18 detox[7611] DEBUG: [WSS_CLOSE] Detox server has been closed gracefully
+Jan 10 16:55:18 detox[7611] TRACE: [SESSION_TORN] tester exited session 9c066648-0979-5a3a-41bf-d03c6ca992dc
+Jan 10 16:55:18 detox[7611] TRACE: [DETOX_CREATE] created a Detox instance with config:
+{
+  appsConfig: {
+    default: {
+      type: 'android.apk',
+      binaryPath: '../app-debug.apk'
+    }
+  },
+  artifactsConfig: {
+    rootDir: 'artifacts-cli/',
+    plugins: {
+      log: {
+        enabled: true,
+        keepOnlyFailedTestsArtifacts: false
+      },
+      screenshot: {
+        enabled: true,
+        shouldTakeAutomaticSnapshots: true,
+        keepOnlyFailedTestsArtifacts: false,
+        takeWhen: {
+          testStart: true,
+          testDone: true,
+          appNotReady: true
+        }
+      },
+      video: {
+        enabled: false,
+        keepOnlyFailedTestsArtifacts: false
+      },
+      instruments: {
+        enabled: false,
+        keepOnlyFailedTestsArtifacts: false
+      },
+      timeline: {
+        enabled: false
+      },
+      uiHierarchy: {
+        enabled: false,
+        keepOnlyFailedTestsArtifacts: false
+      }
+    },
+    pathBuilder: ArtifactPathBuilder {
+      _rootDir: 'artifacts-path'
+    }
+  },
+  behaviorConfig: {
+    init: {
+      reinstallApp: false,
+      exposeGlobals: true
+    },
+    cleanup: {
+      shutdownDevice: false
+    },
+    launchApp: 'auto'
+  },
+  cliConfig: {
+    artifactsLocation: 'artifacts-cli/',
+    configPath: './detox.config.json',
+    loglevel: 'info',
+    reuse: true,
+    useCustomLogger: true
+  },
+  configurationName: 'android.real.debug',
+  deviceConfig: {
+    type: 'android.attached',
+    device: {
+      adbName: 'RFCR90M7DPD'
+    }
+  },
+  runnerConfig: {
+    testRunner: 'jest',
+    runnerConfig: 'e2e/config.json',
+    specs: 'e2e',
+    skipLegacyWorkersInjection: false
+  },
+  sessionConfig: {
+    autoStart: true,
+    sessionId: '3fb78422-fd3c-de97-e4dc-029346db8eda',
+    debugSynchronization: 10000
+  }
+}
+Jan 10 16:55:18 detox[7611] DEBUG: [WSS_CREATE] Detox server listening on localhost:49722...
+Jan 10 16:55:18 detox[7611] DEBUG: [WSS_CONNECTION, #49723] registered a new connection.
+Jan 10 16:55:18 detox[7611] TRACE: [WS_OPEN] opened web socket to: ws://localhost:49722
+Jan 10 16:55:18 detox[7611] TRACE: [WS_SEND] {"type":"login","params":{"sessionId":"3fb78422-fd3c-de97-e4dc-029346db8eda","role":"tester"},"messageId":0}
+Jan 10 16:55:18 detox[7611] TRACE: [WSS_GET_FROM, #49723] {"type":"login","params":{"sessionId":"3fb78422-fd3c-de97-e4dc-029346db8eda","role":"tester"},"messageId":0}
+Jan 10 16:55:18 detox[7611] TRACE: [SESSION_CREATED] created session 3fb78422-fd3c-de97-e4dc-029346db8eda
+Jan 10 16:55:18 detox[7611] TRACE: [WSS_SEND_TO, #tester] {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+Jan 10 16:55:18 detox[7611] TRACE: [SESSION_JOINED] tester joined session 3fb78422-fd3c-de97-e4dc-029346db8eda
+Jan 10 16:55:18 detox[7611] TRACE: [WS_MESSAGE] {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+ 
+Jan 10 16:55:18 detox[7611] DEBUG: [EXEC_CMD, #3] "/usr/local/bin/adb"  devices
+Jan 10 16:55:18 detox[7611] DEBUG: [EXEC_SUCCESS, #3] List of devices attached
+RFCR90M7DPD	device
+
+
+Jan 10 16:55:18 detox[7611] DEBUG: [DEVICE_LOOKUP] Found a matching & free device RFCR90M7DPD
+Jan 10 16:55:18 detox[7611] DEBUG: [EXEC_CMD, #4] "/usr/local/bin/adb" -s RFCR90M7DPD shell "dumpsys power | grep \"^[ ]*m[UW].*=\""
+Jan 10 16:55:18 detox[7611] TRACE: [EXEC_SUCCESS, #4]   mWakefulness=Awake
+  mWakefulnessChanging=false
+  mWakeLockSummary=0x0
+  mWakeUpWhenPluggedOrUnpluggedConfig=true
+  mWakeUpWhenPluggedOrUnpluggedInTheaterModeConfig=false
+  mUserActivityTimeoutOverrideFromWindowManager=-1
+  mUserActivityTimeoutForDexOverrideFromWindowManager=-1
+  mUserInactiveOverrideFromWindowManager=false
+  mUserId=0
+  mWakeLockSummary=0x0
+
+Jan 10 16:55:18 detox[7611] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBootDevice({ deviceId: 'RFCR90M7DPD', type: 'device', coldBoot: false })
+Jan 10 16:55:18 detox[7611] ERROR: $ANDROID_SDK_ROOT is not defined, set the path to the SDK installation directory into $ANDROID_SDK_ROOT,
+Go to https://developer.android.com/studio/command-line/variables.html for more details
+Jan 10 16:55:18 detox[7611] INFO:  [97mExample (goodbye)[39m is assigned to [91mundefined[39m
+Jan 10 16:55:18 detox[7611] INFO:  [1m[37mExample (goodbye): [39m[22m[90mshould show goodbye screen after tap[39m
+Jan 10 16:55:18 detox[7611] INFO:  [1m[37mExample (goodbye): [39m[22m[90mshould show goodbye screen after tap[39m[90m [[31mFAIL[90m][39m
+Jan 10 16:55:18 detox[7611] TRACE: [ARTIFACTS_LIFECYCLE] artifactsManager.onBeforeCleanup()
+Jan 10 16:55:18 detox[7611] TRACE: [ARTIFACT_START] starting FileArtifact
+Jan 10 16:55:18 detox[7611] TRACE: [ARTIFACT_STOP] stopping FileArtifact
+Jan 10 16:55:18 detox[7611] TRACE: [ARTIFACT_SAVE] saving FileArtifact to: artifacts-path/detox_pid_7611.json.log { append: true }
+Jan 10 16:55:18 detox[7611] TRACE: [ARTIFACT_START] starting FileArtifact
+Jan 10 16:55:18 detox[7611] TRACE: [ARTIFACT_STOP] stopping FileArtifact
+Jan 10 16:55:18 detox[7611] TRACE: [ARTIFACT_SAVE] saving FileArtifact to: artifacts-path/detox_pid_7611.log { append: true }
+Jan 10 16:55:18 detox[7611] DEBUG: [MOVE_FILE] moving "/private/var/folders/t9/mxs3t0d941j6w_1dm67555qm0000gp/T/869c5788-28de-45b4-8261-d25753be429f.detox.log" to artifacts-path/detox_pid_7611.json.log via appending
+Jan 10 16:55:18 detox[7611] DEBUG: [MOVE_FILE] moving "/private/var/folders/t9/mxs3t0d941j6w_1dm67555qm0000gp/T/de51a12b-7f89-4b0e-a6fd-17f400a9ad27.detox.log" to artifacts-path/detox_pid_7611.log via appending
+Jan 10 16:55:18 detox[7611] DEBUG: [WSS_CLOSE] Detox server has been closed gracefully
+Jan 10 16:55:18 detox[7611] TRACE: [SESSION_TORN] tester exited session 3fb78422-fd3c-de97-e4dc-029346db8eda

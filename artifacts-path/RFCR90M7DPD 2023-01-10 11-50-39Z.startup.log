@@ -1,0 +1,207 @@
+--------- beginning of main
+01-10 17:19:43.978 13721 13721 I etox.rn.example: Late-enabling -Xcheck:jni
+01-10 17:19:44.016 13721 13721 D ActivityThread: setConscryptValidator
+01-10 17:19:44.016 13721 13721 D ActivityThread: setConscryptValidator - put
+01-10 17:19:44.030 13721 13721 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10306; state: ENABLED
+--------- beginning of system
+01-10 17:19:44.038 13721 13721 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[com.detox.rn.example]: arm64-v8a, null instrumentation[com.detox.rn.example.test]: null, null
+01-10 17:19:44.042 13721 13721 W etox.rn.example: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*2256426886])
+01-10 17:19:44.043 13721 13721 W etox.rn.example: ClassLoaderContext classpath size mismatch. expected=0, found=2 (PCL[] | PCL[/system/framework/android.test.runner.jar*2256426886:/system/framework/android.test.mock.jar*2695051129])
+01-10 17:19:44.044 13721 13721 W ziparchive: Unable to open '/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.dm': No such file or directory
+01-10 17:19:44.044 13721 13721 W ziparchive: Unable to open '/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.dm': No such file or directory
+01-10 17:19:44.088 13721 13721 W etox.rn.example: ClassLoaderContext classpath size mismatch. expected=0, found=7 (PCL[] | PCL[/system/framework/android.test.runner.jar*2256426886:/system/framework/android.test.mock.jar*2695051129:/system/framework/android.test.base.jar*1628045882:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk*980344647:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk!classes2.dex*1179957867:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk!classes3.dex*2764516475:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk!classes4.dex*449714950])
+01-10 17:19:44.093 13721 13721 D nativeloader: Configuring classloader-namespace for system apk /system/framework/android.test.runner.jar:/system/framework/android.test.mock.jar:/system/framework/android.test.base.jar:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk:/data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/base.apk. target_sdk_version=31, uses_libraries=, library_path=/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/lib/arm64:/data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/lib/arm64:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk!/lib/arm64-v8a:/data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/base.apk!/lib/arm64-v8a:/system/lib64:/system_ext/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.detox.rn.example:/system/lib64:/system_ext/lib64
+01-10 17:19:44.106 13721 13721 V GraphicsEnvironment: ANGLE Developer option for 'com.detox.rn.example' set to: 'default'
+01-10 17:19:44.106 13721 13721 V GraphicsEnvironment: ANGLE GameManagerService for com.detox.rn.example: false
+01-10 17:19:44.106 13721 13721 V GraphicsEnvironment: Updatable production driver is not supported on the device.
+01-10 17:19:44.110 13721 13721 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+01-10 17:19:44.112 13721 13721 D nativeloader: Configuring classloader-namespace for system apk /system/framework/android.test.mock.jar. target_sdk_version=31, uses_libraries=ALL, library_path=/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/lib/arm64:/data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/lib/arm64:/system/lib64:/system_ext/lib64, permitted_path=/data:/mnt/expand:/system/lib64:/system_ext/lib64
+01-10 17:19:44.112 13721 13721 D nativeloader: Extending system_exposed_libraries: libvesgraphicframework.videoeditor.samsung.so:libvesinterface.videoeditor.samsung.so:libvesframework.videoeditor.samsung.so:libBestComposition.polarr.so:libTracking.polarr.so:libFeature.polarr.so:libPolarrSnap.polarr.so:libYuv.polarr.so:lib.engmodejni.samsung.so:libhal.wsm.samsung.so:libheifcapture_jni.media.samsung.so:libjpegsq.media.samsung.so:libslljpeg.media.samsung.so:libsemimagecrop_jni.media.samsung.so:libapex_jni.media.samsung.so:libsume_mediabuffer_jni.media.samsung.so:lib_vnd_client.dk.samsung.so:lib_native_client.dk.samsung.so:lib_nativeJni.dk.samsung.so:libSDKRecognitionOCR.spenocr.samsung.so:libSDKMoireDetector.spenocr.samsung.so:libtensorflowlite_c.spenocr.samsung.so:libhumantracking.arcsoft.so:libPortraitDistortionCorrection.arcsoft.so:libPortraitDistortionCorrectionCali.arcsoft.so:libface_landmark.arcsoft.so:libFacialStickerEngine.arcsoft.so:libveengine.arcsoft.so:libimage_enhancement.arcsoft.so:liblow_light_hdr.arcsoft.so:libhigh_dynamic_range.arcsoft.so:l
+01-10 17:19:44.115 13721 13721 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+01-10 17:19:44.116 13721 13721 W etox.rn.example: ClassLoaderContext shared library size mismatch. Expected=0, found=2 (PCL[] | PCL[]{PCL[/system/framework/android.test.base.jar*1628045882]#PCL[/system/framework/android.test.mock.jar*2695051129]})
+01-10 17:19:44.117 13721 13721 D nativeloader: Configuring classloader-namespace for system apk /system/framework/android.test.runner.jar. target_sdk_version=31, uses_libraries=ALL, library_path=/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/lib/arm64:/data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/lib/arm64:/system/lib64:/system_ext/lib64, permitted_path=/data:/mnt/expand:/system/lib64:/system_ext/lib64
+01-10 17:19:44.117 13721 13721 D nativeloader: Extending system_exposed_libraries: libvesgraphicframework.videoeditor.samsung.so:libvesinterface.videoeditor.samsung.so:libvesframework.videoeditor.samsung.so:libBestComposition.polarr.so:libTracking.polarr.so:libFeature.polarr.so:libPolarrSnap.polarr.so:libYuv.polarr.so:lib.engmodejni.samsung.so:libhal.wsm.samsung.so:libheifcapture_jni.media.samsung.so:libjpegsq.media.samsung.so:libslljpeg.media.samsung.so:libsemimagecrop_jni.media.samsung.so:libapex_jni.media.samsung.so:libsume_mediabuffer_jni.media.samsung.so:lib_vnd_client.dk.samsung.so:lib_native_client.dk.samsung.so:lib_nativeJni.dk.samsung.so:libSDKRecognitionOCR.spenocr.samsung.so:libSDKMoireDetector.spenocr.samsung.so:libtensorflowlite_c.spenocr.samsung.so:libhumantracking.arcsoft.so:libPortraitDistortionCorrection.arcsoft.so:libPortraitDistortionCorrectionCali.arcsoft.so:libface_landmark.arcsoft.so:libFacialStickerEngine.arcsoft.so:libveengine.arcsoft.so:libimage_enhancement.arcsoft.so:liblow_light_hdr.arcsoft.so:libhigh_dynamic_range.arcsoft.so:l
+01-10 17:19:44.121 13721 13721 W etox.rn.example: ClassLoaderContext shared library size mismatch. Expected=0, found=3 (PCL[] | PCL[]{PCL[/system/framework/android.test.base.jar*1628045882]#PCL[/system/framework/android.test.mock.jar*2695051129]#PCL[/system/framework/android.test.runner.jar*2256426886]{PCL[/system/framework/android.test.base.jar*1628045882]#PCL[/system/framework/android.test.mock.jar*2695051129]}};PCL[/system/framework/android.test.runner.jar*2256426886:/system/framework/android.test.mock.jar*2695051129:/system/framework/android.test.base.jar*1628045882:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk*980344647:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk!classes2.dex*1179957867:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk!classes3.dex*2764516475:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk!classes4.dex*449714950:/data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/base.apk*265502633:/data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/base.apk!classes2.dex*1286856787:/data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/base.apk!classes3.dex*3228769713:/data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/base.apk!classes4.dex*1631427118])
+01-10 17:19:44.123 13721 13721 W etox.rn.example: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*2256426886]{PCL[/system/framework/android.test.base.jar*1628045882]#PCL[/system/framework/android.test.mock.jar*2695051129]#PCL[/system/framework/android.test.runner.jar*2256426886]{PCL[/system/framework/android.test.base.jar*1628045882]#PCL[/system/framework/android.test.mock.jar*2695051129]}};PCL[/system/framework/android.test.runner.jar*2256426886:/system/framework/android.test.mock.jar*2695051129:/system/framework/android.test.base.jar*1628045882:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk*980344647:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk!classes2.dex*1179957867:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk!classes3.dex*2764516475:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk!classes4.dex*449714950:/data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/base.apk*265502633:/data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/base.apk!classes2.dex*1286856787:/data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/base.apk!classes3.dex*3228769713:/data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/base.apk!classes4.dex*1631427118])
+01-10 17:19:44.124 13721 13721 W etox.rn.example: ClassLoaderContext classpath size mismatch. expected=0, found=2 (PCL[] | PCL[/system/framework/android.test.runner.jar*2256426886:/system/framework/android.test.mock.jar*2695051129]{PCL[/system/framework/android.test.base.jar*1628045882]#PCL[/system/framework/android.test.mock.jar*2695051129]#PCL[/system/framework/android.test.runner.jar*2256426886]{PCL[/system/framework/android.test.base.jar*1628045882]#PCL[/system/framework/android.test.mock.jar*2695051129]}};PCL[/system/framework/android.test.runner.jar*2256426886:/system/framework/android.test.mock.jar*2695051129:/system/framework/android.test.base.jar*1628045882:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk*980344647:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk!classes2.dex*1179957867:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk!classes3.dex*2764516475:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk!classes4.dex*449714950:/data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/base.apk*265502633:/data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/base.apk!classes2.dex*1286856787:/data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/base.apk!classes3.dex*3228769713:/data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/base.apk!classes4.dex*1631427118])
+01-10 17:19:44.125 13721 13721 W ziparchive: Unable to open '/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.dm': No such file or directory
+01-10 17:19:44.125 13721 13721 W ziparchive: Unable to open '/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.dm': No such file or directory
+01-10 17:19:44.167 13721 13721 W etox.rn.example: ClassLoaderContext classpath size mismatch. expected=0, found=7 (PCL[] | PCL[/system/framework/android.test.runner.jar*2256426886:/system/framework/android.test.mock.jar*2695051129:/system/framework/android.test.base.jar*1628045882:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk*980344647:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk!classes2.dex*1179957867:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk!classes3.dex*2764516475:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk!classes4.dex*449714950]{PCL[/system/framework/android.test.base.jar*1628045882]#PCL[/system/framework/android.test.mock.jar*2695051129]#PCL[/system/framework/android.test.runner.jar*2256426886]{PCL[/system/framework/android.test.base.jar*1628045882]#PCL[/system/framework/android.test.mock.jar*2695051129]}};PCL[/system/framework/android.test.runner.jar*2256426886:/system/framework/android.test.mock.jar*2695051129:/system/framework/android.test.base.jar*1628045882:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk*980344647:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk!classes2.dex*1179957867:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk!classes3.dex*2764516475:/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk!classes4.dex*449714950:/data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/base.apk*265502633:/data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/base.apk!classes2.dex*1286856787:/data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/base.apk!classes3.dex*3228769713:/data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/base.apk!classes4.dex*1631427118])
+01-10 17:19:44.177 13721 13721 D NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: true
+01-10 17:19:44.185 13721 13721 D NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: true
+01-10 17:19:44.192 13721 13721 I MonitoringInstr: Instrumentation started!
+01-10 17:19:44.197 13721 13721 V TestEventClient: No service name argument was given (testDiscoveryService, testRunEventService or orchestratorService)
+01-10 17:19:44.200 13721 13721 V fb-UnpackingSoSource: locked dso store /data/user/0/com.detox.rn.example/lib-main
+01-10 17:19:44.204 13721 13721 I fb-UnpackingSoSource: dso store is up-to-date: /data/user/0/com.detox.rn.example/lib-main
+01-10 17:19:44.204 13721 13721 V fb-UnpackingSoSource: releasing dso store lock for /data/user/0/com.detox.rn.example/lib-main
+01-10 17:19:59.206 13721 13740 E TestButler: Failed to start TestButler; Did you remember to install it before running your tests?
+01-10 17:19:59.206 13721 13740 E TestButler: Running tests without ButlerService, failures or unexpected behavior may occur!!!
+01-10 17:19:59.234 13721 13740 I UsageTrackerFacilitator: Usage tracking enabled
+01-10 17:19:59.239 13721 13740 I TestRequestBuilder: Scanning classpath to find tests in paths [/data/app/~~rojpgZFVv-e7rMoUIXJGcw==/com.detox.rn.example.test-w2TfjvHP_R--zLTPW-DCaA==/base.apk]
+01-10 17:19:59.240 13721 13740 W etox.rn.example: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+01-10 17:19:59.750 13721 13740 D TestExecutor: Adding listener androidx.test.internal.runner.listener.LogRunListener
+01-10 17:19:59.750 13721 13740 D TestExecutor: Adding listener androidx.test.internal.runner.listener.InstrumentationResultPrinter
+01-10 17:19:59.750 13721 13740 D TestExecutor: Adding listener androidx.test.internal.runner.listener.ActivityFinisherRunListener
+01-10 17:19:59.751 13721 13740 I TestRunner: run started: 1 tests
+01-10 17:19:59.754 13721 13740 I TestRunner: started: runDetoxTests(com.example.DetoxTest)
+01-10 17:19:59.758 13721 13740 I TestButlerProbe: Test butler service verification started...
+01-10 17:19:59.758 13721 13740 W TestButlerProbe: Test butler not installed on device - skipping verification
+01-10 17:19:59.767 13721 13740 D EventInjectionStrategy: Creating injection strategy with input manager.
+01-10 17:19:59.767 13721 13740 W etox.rn.example: Accessing hidden method Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager; (unsupported, reflection, allowed)
+01-10 17:19:59.767 13721 13740 W etox.rn.example: Accessing hidden method Landroid/hardware/input/InputManager;->injectInputEvent(Landroid/view/InputEvent;I)Z (unsupported, reflection, allowed)
+01-10 17:19:59.768 13721 13740 W etox.rn.example: Accessing hidden field Landroid/hardware/input/InputManager;->INJECT_INPUT_EVENT_MODE_WAIT_FOR_FINISH:I (unsupported, reflection, allowed)
+01-10 17:19:59.775 13721 13740 W etox.rn.example: Accessing hidden field Ljava/lang/reflect/Field;->accessFlags:I (unsupported, reflection, allowed)
+01-10 17:19:59.850 13721 13768 D OpenGLRenderer: RenderThread::requireGlContext()
+01-10 17:19:59.850 13721 13768 I AdrenoGLES-0: QUALCOMM build                   : cac6e6f805, I5187d04b75
+01-10 17:19:59.850 13721 13768 I AdrenoGLES-0: Build Date                       : 11/22/21
+01-10 17:19:59.850 13721 13768 I AdrenoGLES-0: OpenGL ES Shader Compiler Version: EV031.35.01.10
+01-10 17:19:59.850 13721 13768 I AdrenoGLES-0: Local Branch                     : 
+01-10 17:19:59.850 13721 13768 I AdrenoGLES-0: Remote Branch                    : 
+01-10 17:19:59.850 13721 13768 I AdrenoGLES-0: Remote Branch                    : 
+01-10 17:19:59.850 13721 13768 I AdrenoGLES-0: Reconstruct Branch               : 
+01-10 17:19:59.850 13721 13768 I AdrenoGLES-0: Build Config                     : S P 10.0.7 AArch64
+01-10 17:19:59.850 13721 13768 I AdrenoGLES-0: Driver Path                      : /vendor/lib64/egl/libGLESv2_adreno.so
+01-10 17:19:59.868 13721 13768 I AdrenoGLES-0: PFP: 0x016dc094, ME: 0x00000000
+01-10 17:19:59.880 13721 13768 D OpenGLRenderer: RenderThread::setGrContext()
+01-10 17:19:59.883 13721 13721 D LifecycleMonitor: Lifecycle status change: com.example.MainActivity@752d5d3 in: PRE_ON_CREATE
+01-10 17:19:59.898 13721 13721 D SoLoader: libjscexecutor.so not found on /data/data/com.detox.rn.example/lib-main
+01-10 17:19:59.899 13721 13721 D SoLoader: libjscexecutor.so not found on /data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/lib/arm64
+01-10 17:19:59.899 13721 13721 D SoLoader: libjscexecutor.so not found on /system/lib64
+01-10 17:19:59.899 13721 13721 D SoLoader: libjscexecutor.so not found on /vendor/lib64
+01-10 17:19:59.901 13721 13721 E SoLoader: couldn't find DSO to load: libjscexecutor.so
+01-10 17:19:59.901 13721 13721 E SoLoader: 	SoSource 0: com.facebook.soloader.ApkSoSource[root = /data/data/com.detox.rn.example/lib-main flags = 1]
+01-10 17:19:59.901 13721 13721 E SoLoader: 	SoSource 1: com.facebook.soloader.DirectorySoSource[root = /data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/lib/arm64 flags = 0]
+01-10 17:19:59.901 13721 13721 E SoLoader: 	SoSource 2: com.facebook.soloader.DirectorySoSource[root = /system/lib64 flags = 2]
+01-10 17:19:59.901 13721 13721 E SoLoader: 	SoSource 3: com.facebook.soloader.DirectorySoSource[root = /vendor/lib64 flags = 2]
+01-10 17:19:59.901 13721 13721 E SoLoader: 	Native lib dir: /data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/lib/arm64
+01-10 17:19:59.901 13721 13721 E SoLoader:  result: 0
+01-10 17:19:59.902 13721 13721 D SoLoader: libhermes.so not found on /data/data/com.detox.rn.example/lib-main
+01-10 17:19:59.902 13721 13721 D SoLoader: libhermes.so found on /data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/lib/arm64
+01-10 17:19:59.902 13721 13721 D SoLoader: Not resolving dependencies for libhermes.so
+01-10 17:19:59.911 13721 13721 D SoLoader: libhermes-executor-debug.so not found on /data/data/com.detox.rn.example/lib-main
+01-10 17:19:59.911 13721 13721 D SoLoader: libhermes-executor-debug.so found on /data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/lib/arm64
+01-10 17:19:59.911 13721 13721 D SoLoader: Not resolving dependencies for libhermes-executor-debug.so
+01-10 17:19:59.962 13721 13721 D SensorManager: registerListener :: 11, lsm6dsm Accelerometer Non-wakeup, 66667, 0, 
+01-10 17:19:59.987 13721 13721 I DecorView: [INFO] isPopOver=false config=true
+01-10 17:19:59.987 13721 13721 I DecorView: updateCaptionType: isFloating=false isApplication=true hasWindowDecorCaption=false this=DecorView@31abe90[]
+01-10 17:19:59.987 13721 13721 D DecorView: setCaptionType = 0, this = DecorView@31abe90[]
+01-10 17:19:59.993 13721 13721 I DecorView: getCurrentDensityDpi: from real metrics. densityDpi=420 msg=resources_loaded
+01-10 17:19:59.993 13721 13721 I DecorView: setWindowBackground: isPopOver=false color=ff303030 d=android.graphics.drawable.ColorDrawable@796df8e
+01-10 17:19:59.995 13721 13799 D TrafficStats: tagSocket(102) with statsTag=0xffffffff, statsUid=-1
+01-10 17:19:59.997 13721 13802 D TrafficStats: tagSocket(103) with statsTag=0xffffffff, statsUid=-1
+01-10 17:19:59.998 13721 13799 W unknown:ReactNative: The packager does not seem to be running as we got an IOException requesting its status: Failed to connect to localhost/127.0.0.1:8081
+01-10 17:19:59.998 13721 13721 W etox.rn.example: Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (unsupported, reflection, allowed)
+01-10 17:19:59.999 13721 13721 W etox.rn.example: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (unsupported, reflection, allowed)
+01-10 17:19:59.999 13721 13802 W unknown:ReconnectingWebSocket: Couldn't connect to "ws://localhost:8081/message?device=SM-M526B%20-%2013%20-%20API%2033&app=com.detox.rn.example&clientid=BridgeDevSupportManager", will silently retry
+01-10 17:19:59.999 13721 13801 D TrafficStats: tagSocket(100) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:00.000 13721 13721 D LifecycleMonitor: Lifecycle status change: com.example.MainActivity@752d5d3 in: CREATED
+01-10 17:20:00.001 13721 13721 D LifecycleMonitor: Lifecycle status change: com.example.MainActivity@752d5d3 in: STARTED
+01-10 17:20:00.004 13721 13801 W unknown:InspectorPackagerConnection: Couldn't connect to packager, will silently retry
+01-10 17:20:00.004 13721 13721 D LifecycleMonitor: Lifecycle status change: com.example.MainActivity@752d5d3 in: RESUMED
+01-10 17:20:00.006 13721 13721 I MSHandlerLifeCycle: check: return. pkg=com.detox.rn.example parent=null callers=com.android.internal.policy.DecorView.setVisibility:4378 android.app.ActivityThread.handleResumeActivity:5463 android.app.servertransaction.ResumeActivityItem.execute:54 android.app.servertransaction.ActivityTransactionItem.execute:45 android.app.servertransaction.TransactionExecutor.executeLifecycleState:176 
+01-10 17:20:00.006 13721 13721 I MSHandlerLifeCycle: removeMultiSplitHandler: no exist. decor=DecorView@31abe90[]
+01-10 17:20:00.017 13721 13768 D NativeCustomFrequencyManager: [NativeCFMS] BpCustomFrequencyManager::BpCustomFrequencyManager()
+01-10 17:20:00.037 13721 13721 D InsetsController: onStateChanged: InsetsState: {mDisplayFrame=Rect(0, 0 - 1080, 2400), mDisplayCutout=DisplayCutout{insets=Rect(0, 90 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(506, 0 - 574, 90), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=1080 displayHeight=2400 physicalDisplayWidth=1080 physicalDisplayHeight=2400 density={2.625} cutoutSpec={M 0,0 H -12.95238095238095 V 34.28571428571429 H 12.95238095238095 V 0 H 0 Z @dp} rotation={0} scale={1.0} physicalPixelDisplaySizeRatio={1.0}}}}, mRoundedCorners=RoundedCorners{[RoundedCorner{position=TopLeft, radius=84, center=Point(84, 84)}, RoundedCorner{position=TopRight, radius=84, center=Point(996, 84)}, RoundedCorner{position=BottomRight, radius=84, center=Point(996, 2316)}, RoundedCorner{position=BottomLeft, radius=84, center=Point(84, 2316)}]}  mRoundedCornerFrame=Rect(0, 0 - 1080, 2400), mPrivacyIndicatorBounds=PrivacyIndicatorBounds {static bounds=Rect(964, 0 - 1080, 90) rotation=0}, mSources= { InsetsSource: {mType=ITYPE_STATUS_BAR, mFrame=[0,0][1080,90], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_NAVIGATION_BAR, mFrame=[0,2274][1080,2400], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_LEFT_GESTURES, mFrame=[0,0][0,2400], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_RIGHT_GESTURES, mFrame=[1080,0][1080,2400], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_TOP_MANDATORY_GESTURES, mFrame=[0,0][1080,122], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_BOTTOM_MANDATORY_GESTURES, mFrame=[0,2274][1080,2400], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_LEFT_DISPLAY_CUTOUT, mFrame=[0,0][-100000,2400], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_TOP_DISPLAY_CUTOUT, mFrame=[0,0][1080,90], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_RIGHT_DISPLAY_CUTOUT, mFrame=[100000,0][1080,2400], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_BOTTOM_DISPLAY_CUTOUT, mFrame=[0,100000][1080,2400], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_TOP_TAPPABLE_ELEMENT, mFrame=[0,0][1080,90], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_BOTTOM_TAPPABLE_ELEMENT, mFrame=[0,2274][1080,2400], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_IME, mFrame=[0,0][0,0], mVisibleFrame=[0,1409][1080,2400], mVisible=false, mInsetsRoundedCornerFrame=false} } host=com.detox.rn.example/com.example.MainActivity from=android.view.ViewRootImpl.setView:1700
+01-10 17:20:00.041 13721 13721 I ViewRootImpl@4b3dbb[MainActivity]: setView = com.android.internal.policy.DecorView@31abe90 TM=false
+01-10 17:20:00.044 13721 13721 I MSHandlerLifeCycle: removeMultiSplitHandler: no exist. decor=DecorView@31abe90[MainActivity]
+01-10 17:20:00.049 13721 13811 D SoLoader: libfbjni.so not found on /data/data/com.detox.rn.example/lib-main
+01-10 17:20:00.050 13721 13811 D SoLoader: libfbjni.so found on /data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/lib/arm64
+01-10 17:20:00.050 13721 13811 D SoLoader: Not resolving dependencies for libfbjni.so
+01-10 17:20:00.051 13721 13721 W unknown:ReactNative: Packager connection already open, nooping.
+01-10 17:20:00.055 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: performTraversals params={(0,0)(fillxfill) sim={adjust=pan forwardNavigation} ty=BASE_APPLICATION wanim=0x1030309
+01-10 17:20:00.055 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]:   fl=81810100
+01-10 17:20:00.055 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]:   pfl=12020040
+01-10 17:20:00.055 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]:   bhv=DEFAULT
+01-10 17:20:00.055 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]:   fitSides= naviIconColor=0}
+01-10 17:20:00.056 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: performTraversals mFirst=true windowShouldResize=true viewVisibilityChanged=false mForceNextWindowRelayout=false params={(0,0)(fillxfill) sim={adjust=pan forwardNavigation} ty=BASE_APPLICATION wanim=0x1030309
+01-10 17:20:00.056 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]:   fl=81810100
+01-10 17:20:00.056 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]:   pfl=12020040
+01-10 17:20:00.056 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]:   bhv=DEFAULT
+01-10 17:20:00.056 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]:   fitSides= naviIconColor=0}
+01-10 17:20:00.059 13721 13811 V AsyncStorageExpoMigration: No scoped database found
+01-10 17:20:00.061 13721 13811 D SoLoader: libreactnativejni.so not found on /data/data/com.detox.rn.example/lib-main
+01-10 17:20:00.061 13721 13811 D SoLoader: libreactnativejni.so found on /data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/lib/arm64
+01-10 17:20:00.061 13721 13811 D SoLoader: Not resolving dependencies for libreactnativejni.so
+01-10 17:20:00.068 13721 13721 E BufferQueueProducer: Unable to open libpenguin.so: dlopen failed: library "libpenguin.so" not found.
+01-10 17:20:00.068 13721 13721 D BLASTBufferQueue: new BLASTBufferQueue, mNativeObject= 0xb400007b814a6330 name= ViewRootImpl@4b3dbb[MainActivity] sc.mNativeObject= 0xb400007b114c45f0 caller= android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:2789 android.view.ViewRootImpl.relayoutWindow:9635 android.view.ViewRootImpl.performTraversals:3759 android.view.ViewRootImpl.doTraversal:2991 android.view.ViewRootImpl$TraversalRunnable.run:10665 android.view.Choreographer$CallbackRecord.run:1301 android.view.Choreographer$CallbackRecord.run:1309 android.view.Choreographer.doCallbacks:923 android.view.Choreographer.doFrame:852 android.view.Choreographer$FrameDisplayEventReceiver.run:1283 
+01-10 17:20:00.068 13721 13721 D BLASTBufferQueue: update, w= 1080 h= 2400 mNativeObject= 0xb400007b814a6330 sc.mNativeObject= 0xb400007b114c45f0 format= -1 caller= android.graphics.BLASTBufferQueue.<init>:76 android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:2789 android.view.ViewRootImpl.relayoutWindow:9635 android.view.ViewRootImpl.performTraversals:3759 android.view.ViewRootImpl.doTraversal:2991 android.view.ViewRootImpl$TraversalRunnable.run:10665 
+01-10 17:20:00.069 13721 13721 I ViewRootImpl@4b3dbb[MainActivity]: Relayout returned: old=(0,0,1080,2400) new=(0,0,1080,2400) req=(1080,2400)0 dur=11 res=0x3 s={true 0xb400007c114a8090} ch=true seqId=0
+01-10 17:20:00.070 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: mThreadedRenderer.initialize() mSurface={isValid=true 0xb400007c114a8090} hwInitialized=true
+01-10 17:20:00.071 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: reportNextDraw android.view.ViewRootImpl.performTraversals:4313 android.view.ViewRootImpl.doTraversal:2991 android.view.ViewRootImpl$TraversalRunnable.run:10665 android.view.Choreographer$CallbackRecord.run:1301 android.view.Choreographer$CallbackRecord.run:1309 
+01-10 17:20:00.071 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: Setup new sync id=0
+01-10 17:20:00.071 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: Setting syncFrameCallback
+01-10 17:20:00.071 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: registerCallbacksForSync syncBuffer=false
+01-10 17:20:00.072 13721 13768 D OpenGLRenderer: eglCreateWindowSurface
+01-10 17:20:00.077 13721 13817 D ViewRootImpl@4b3dbb[MainActivity]: Received frameDrawingCallback syncResult=0 frameNum=1.
+01-10 17:20:00.077 13721 13817 D ViewRootImpl@4b3dbb[MainActivity]: Setting up sync and frameCommitCallback
+01-10 17:20:00.090 13721 13768 D BLASTBufferQueue: [ViewRootImpl@4b3dbb[MainActivity]#0](f:0,a:0) onFrameAvailable the first frame is available
+01-10 17:20:00.091 13721 13768 D ViewRootImpl@4b3dbb[MainActivity]: Received frameCommittedCallback lastAttemptedDrawFrameNum=1 didProduceBuffer=true
+01-10 17:20:00.092 13721 13768 D OpenGLRenderer: CFMS:: SetUp Pid : 13721    Tid : 13768
+01-10 17:20:00.095 13721 13768 W Parcel  : Expecting binder but got null!
+01-10 17:20:00.095 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: onSyncComplete
+01-10 17:20:00.096 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: setupSync seqId=0 mSyncId=0 fn=1 caller=android.view.ViewRootImpl$$ExternalSyntheticLambda11.accept:6 android.window.SurfaceSyncer.lambda$setupSync$1$android-window-SurfaceSyncer:128 android.window.SurfaceSyncer$$ExternalSyntheticLambda1.accept:8 android.window.SurfaceSyncer$SyncSet.checkIfSyncIsComplete:382 android.window.SurfaceSyncer$SyncSet.markSyncReady:359 android.window.SurfaceSyncer.markSyncReady:151 android.view.ViewRootImpl.performTraversals:4373 
+01-10 17:20:00.096 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: reportDrawFinished seqId=0 mSyncId=-1 fn=1 mSurfaceChangedTransaction=0xb400007b4149cb30
+01-10 17:20:00.111 13721 13721 I ViewRootImpl@4b3dbb[MainActivity]: MSG_WINDOW_FOCUS_CHANGED 1 0
+01-10 17:20:00.111 13721 13721 D ViewRootImpl@4b3dbb[MainActivity]: mThreadedRenderer.initializeIfNeeded()#2 mSurface={isValid=true 0xb400007c114a8090}
+01-10 17:20:00.112 13721 13721 D InputMethodManager: startInputInner - Id : 0
+01-10 17:20:00.112 13721 13721 I InputMethodManager: startInputInner - mService.startInputOrWindowGainedFocus
+01-10 17:20:00.130 13721 13721 D InputMethodManager: startInputInner - Id : 0
+01-10 17:20:00.233 13721 13740 I Detox   : Detox server connection details: url=ws://localhost:50115, sessionId=800d220d-28aa-415d-23ec-317adbe77cab
+01-10 17:20:00.239 13721 13838 I DetoxDispatcher: Handling action '_init' (ID #0)...
+01-10 17:20:00.239 13721 13838 I Detox   : Connecting to server...
+01-10 17:20:00.239 13721 13838 I DetoxWSClient: At connectToServer
+01-10 17:20:00.249 13721 13842 D TrafficStats: tagSocket(128) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:00.266 13721 13842 D DetoxWSClient: At onOpen
+01-10 17:20:00.266 13721 13842 I DetoxWSClient: Sending out action 'login' (ID #0)
+01-10 17:20:00.266 13721 13842 I Detox   : Connected to server!
+01-10 17:20:00.274 13721 13842 D DetoxWSClient: Received action 'loginSuccess' (ID #0, params={"testerConnected":true,"appConnected":true})
+01-10 17:20:00.281 13721 13842 D DetoxWSClient: Received action 'isReady' (ID #-1000, params={})
+01-10 17:20:02.004 13721 13802 D TrafficStats: tagSocket(129) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:02.008 13721 13801 D TrafficStats: tagSocket(129) with statsTag=0xffffffff, statsUid=-1
+01-10 17:20:02.110 13721 13811 W unknown:ReactContext: initializeMessageQueueThreads() is called.
+01-10 17:20:02.130 13721 13721 W unknown:ReactNative: Packager connection already open, nooping.
+01-10 17:20:02.144 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.drawer.ReactDrawerLayoutManager
+01-10 17:20:02.147 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.uimanager.LayoutShadowNode
+01-10 17:20:02.149 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollViewManager
+01-10 17:20:02.151 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollContainerViewManager
+01-10 17:20:02.152 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ReactProgressBarViewManager
+01-10 17:20:02.152 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ProgressBarShadowNode
+01-10 17:20:02.153 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactScrollViewManager
+01-10 17:20:02.155 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.slider.ReactSliderManager
+01-10 17:20:02.156 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.slider.ReactSliderManager$ReactSliderShadowNode
+01-10 17:20:02.157 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager
+01-10 17:20:02.158 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager$ReactSwitchShadowNode
+01-10 17:20:02.158 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.swiperefresh.SwipeRefreshLayoutManager
+01-10 17:20:02.159 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageViewManager
+01-10 17:20:02.160 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageShadowNode
+01-10 17:20:02.161 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.image.ReactImageManager
+01-10 17:20:02.162 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ReactModalHostManager
+01-10 17:20:02.163 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ModalHostShadowNode
+01-10 17:20:02.163 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextManager
+01-10 17:20:02.164 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextShadowNode
+01-10 17:20:02.164 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputManager
+01-10 17:20:02.166 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputShadowNode
+01-10 17:20:02.168 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextViewManager
+01-10 17:20:02.169 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextShadowNode
+01-10 17:20:02.170 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.view.ReactViewManager
+01-10 17:20:02.171 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextViewManager
+01-10 17:20:02.172 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextShadowNode
+01-10 17:20:02.172 13721 13814 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.unimplementedview.ReactUnimplementedViewManager
+01-10 17:20:02.174 13721 13814 W unknown:ReactContext: initializeMessageQueueThreads() is called.
+01-10 17:20:02.175 13721 13814 D SoLoader: libyoga.so not found on /data/data/com.detox.rn.example/lib-main
+01-10 17:20:02.175 13721 13814 D SoLoader: libyoga.so found on /data/app/~~SpmWQT_3VSNqIRMjQQp4OA==/com.detox.rn.example-vgEGDlBDK4xHHieL-l9AHw==/lib/arm64
+01-10 17:20:02.175 13721 13814 D SoLoader: Not resolving dependencies for libyoga.so
+01-10 17:20:02.179 13721 13721 D DetoxRNLoading: Listener-proxy method called: onReactContextInitialized
+01-10 17:20:02.179 13721 13721 I DetoxRNLoading: Got new RN-context async'ly through listener
+01-10 17:20:02.180 13721 13721 D DetoxRNLoading: Listener-proxy method called: equals
+01-10 17:20:02.184 13721 13838 I DetoxRNIdleRes: Setting up Espresso Idling Resources for React Native
+01-10 17:20:02.190 13721 13838 D AsyncStorageIR: Checking whether a custom IR for Async-Storage is required... (legacy=false)
+01-10 17:20:02.190 13721 13838 D AsyncStorageIR: IR for Async-Storage is required! (legacy=false)
+01-10 17:20:02.190 13721 13838 D AsyncStorageIR: Checking whether a custom IR for Async-Storage is required... (legacy=true)
+01-10 17:20:02.191 13721 13814 W etox.rn.example: Accessing hidden method Landroid/os/MessageQueue;->next()Landroid/os/Message; (unsupported, reflection, allowed)
+01-10 17:20:02.191 13721 13814 W etox.rn.example: Accessing hidden field Landroid/os/MessageQueue;->mMessages:Landroid/os/Message; (unsupported, reflection, allowed)
+01-10 17:20:02.191 13721 13838 D AsyncStorageIR: IR for Async-Storage is required! (legacy=true)
+01-10 17:20:02.191 13721 13814 W etox.rn.example: Accessing hidden method Landroid/os/Message;->recycleUnchecked()V (unsupported, reflection, allowed)
+01-10 17:20:02.193 13721 13721 D AsyncStorageIR: Async-storage is busy!
+01-10 17:20:02.193 13721 13721 D AsyncStorageIRLegacy: Async-storage is busy!
+01-10 17:20:02.194 13721 13838 I 

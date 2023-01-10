@@ -1,0 +1,52 @@
+{
+  "test-runner": "jest",
+  "runner-config": "e2e/config.json",
+  "specs": "e2e",
+  "apps": {
+    "android.debug": {
+      "type": "android.apk",
+      "binaryPath": "../app-debug.apk"
+    }
+  },
+  "devices": {
+    "real": {
+      "type": "android.attached",
+      "device": {
+        "adbName": "RFCR90M7DPD"
+      }
+    }
+  },
+  "configurations": {
+    "android.real.debug": {
+      "device": "real",
+      "app": "android.debug"
+    }
+  },
+  "behavior": {
+    "init": {
+      "reinstallApp": false,
+      "exposeGlobals": true
+    },
+    "launchApp": "auto",
+    "cleanup": {
+      "shutdownDevice": false
+    }
+  },
+  "artifacts": {
+    "pathBuilder": "./config/pathbuilder.js",
+    "plugins": {
+      "log": {"enabled": true},
+      "screenshot": {
+        "enabled": true,
+        "shouldTakeAutomaticSnapshots": true,
+        "keepOnlyFailedTestsArtifacts": false,
+        "takeWhen": {
+          "testStart": true,
+          "testDone": true,
+          "appNotReady":true
+        }
+      }
+    },
+    "rootDir": "artifacts/"
+  }
+}
